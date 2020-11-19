@@ -1,0 +1,218 @@
+/* index.html 樣式表 */
+
+/*------------------------------*/
+
+/* 頂部導航條容器 */
+.top-bar-wrapper {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+}
+
+/* 導航之間的線條 */
+.top-bar .line {
+    font-size: 12px;
+    color: #424242;
+    margin: 0 8px;
+}
+
+/* 導航樣式 */
+.top-bar a {
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+/* 導航移入效果 */
+.top-bar a:hover {
+    color: #fff;
+}
+
+/* 浮動 左側導航 */
+.service,
+.top-bar li {
+    float: left;
+}
+
+/* 浮動 右側導航, 購物車 */
+.shop-car,
+.user-info {
+    float: right;
+}
+
+/* 相對位置 */
+.app {
+    position: relative;
+}
+
+/* 移入滑鼠後顯示 */
+.app:hover .qrcode,
+.app:hover::after{
+    display: block;
+    height: 148px;
+}
+
+/* 半三角形 */
+.app::after {
+    display: none;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-top: none;
+    border-bottom-color: white;
+}
+
+/* 下載app的下拉二維碼 */
+.app .qrcode {
+    position: absolute;
+    left: -40px;
+    width: 124px;
+    height: 0;
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    color: #424242;
+    font-size: 14px;
+    transition: height .3s;
+}
+
+/* 二維碼圖片 */
+.app .qrcode img {
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 12px;
+}
+
+/* 購物車 */
+.shop-car {
+    margin-left: 26px;
+    position: relative;
+}
+/* 購物車文字 */
+.shop-car a {
+    width: 120px;
+    background: #424242;
+    text-align: center;
+}
+/* 購物車圖標位置 */
+.shop-car i {
+    margin-right: 2px;
+}
+
+/* 購物車下拉物品 */
+.shop-car .items {
+    position: absolute;
+    /* bottom: -100px; */
+    top: 40px;
+    right: 0px;
+    width: 316px;
+    /* height: 100px; */
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 3px 5px rgba(0,0,0,.2);
+    line-height: 100px;
+    text-align: center;
+    transition: height .3s;
+}
+
+/* 購物車滑鼠移入效果 */
+.shop-car:hover a {
+    background: #fff;
+    color: #ff6700;
+}
+
+/* 購物車滑鼠移入顯示下拉選單 */
+.shop-car:hover .items{
+    height: 100px;
+}
+
+/*------------------------------*/
+
+/* 頭部容器 */
+.header {
+    height: 100px;
+    /* background-color: #bfa; */
+}
+
+/* logo 位置 */
+.header .logo {
+    float: left;
+    margin-top: 22.5px;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    /* 隱藏logo文字 */
+    text-indent: -9999px;
+}
+
+/* logo 小米圖標 + 統一 logo 值 */
+.header .logo a {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    background-color: #FF6700;
+    background-image: url("../img/mi-logo.png");
+    background-position: center;
+    transition: left .3s;
+}
+
+/* logo home圖標 */
+.header .logo .home {
+    left: -55px;
+    background-image: url("../img/mi-home.png");
+}
+
+/* 滑鼠移入後移動兩個logo位置 */
+.logo:hover .mi {
+    left: 55px;
+}
+
+.logo:hover .home {
+    left: 0px;
+}
+
+/* 中間導航條 */
+.header .nav-wrapper {
+    float: left;
+    margin-left: 7px;
+}
+
+/* 導航條 */
+.header .nav {
+    /* width: 792px; */
+    height: 100px;
+    line-height: 100px;
+    padding-left: 58px;
+}
+
+/* 導航條中的連結 */
+.nav-wrapper li {
+    float: left;
+}
+
+/* 字體樣式 */
+.nav-wrapper li a {
+    display: block;
+    font-size: 16px;
+    margin-right: 20px;
+    /* margin: 0 10px; */
+}
+
+.nav-wrapper li a:hover {
+    color: #ff6700;
+}
+
+/* 隱藏全部商品 */
+.hide {
+    visibility: hidden;
+}

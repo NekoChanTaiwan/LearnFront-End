@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hi">hello world</h1>
+    <h1>hi NekoChan</h1>
+    <ul>
+        <li class="list">this is first line</li>
+        <li>this is second line</li>
+        <li class="list">this is third line</li>
+    </ul>
+
+    <a href="http://example.com/file.zip">下載</a>
+
+
+    <script>
+        let elements;
+
+        // getElementById
+        elements = document.getElementById("hi"); // <h1 id="hi">hello world</h1>
+        // console.log(elements);
+
+        // getElementsByTagName
+        elements = document.getElementsByTagName("li"); // [li.list, li, li.list]
+        // console.log(elements);
+
+        // getElementsByClassName
+        elements = document.getElementsByClassName("list"); // [li.list, li.list]
+        // console.log(elements);
+
+        // querySelector
+        elements = document.querySelector("h1"); // <h1 id="hi">hello world</h1>
+        // console.log(elements);
+
+        // querySelectorAll
+        elements = document.querySelectorAll("li"); // [li.list, li, li.list]
+        // console.log(elements);
+
+        // matches
+        for (let elem of document.body.children) {
+            if(elem.matches('a[href$="zip"]')) {
+                console.log("The archive reference: " + elem.href); // The archive reference: http://example.com/file.zip
+            }
+        }
+    </script>
+</body>
+</html>

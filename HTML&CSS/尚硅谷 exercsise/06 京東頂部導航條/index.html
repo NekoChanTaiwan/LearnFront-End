@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入重置樣式表 -->
+    <link rel="stylesheet" href="/尚硅谷 exercsise/CSS/reset.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/尚硅谷 exercsise/FA/css/all.css">
+    <style>
+        /*
+        * 修復高度塌陷
+        */
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        /* 字體 */
+        body {
+            font: 12px/1.5 微軟正黑體;
+            background-color: #bfa;
+        }
+
+        /* 外部容器樣式 */
+        .top-bar-wrapper {
+            width: 100%;
+            background-color: #E3E4E5;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px #ddd solid;
+        }
+
+        /* 內部容器 */
+        .top-bar {
+            width: 1190px;
+            margin: 0 auto;
+
+            position: relative;
+        }
+
+        /* 字體樣式 */
+        .top-bar a,
+        .top-bar span,
+        .top-bar i {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .top-bar a:hover,
+        .top-bar a.highlight {
+            color: #F10215;
+        }
+
+        /* 位置 */
+        .location .fas {
+            font-size: 14px;
+            color: #F10215;
+        }
+
+        /* 位置下拉框 */
+        .location .city-list {
+            display: none;
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            border: 1px solid rgb(204, 204, 204);
+            position: absolute;
+            top: 31px;
+            box-shadow: 0 2px 2px rgba(0,0,0,.2);
+            z-index: 999;
+        }
+
+        /* 顯示下拉框 */
+        .location:hover .city-list {
+            display: block;
+        }
+
+        .location, .shortcut li {
+            float: left;
+        }
+
+        .current-city{
+            border: 1px solid transparent;
+            border-bottom: none;
+            padding: 0 10px;
+            position: relative;
+            z-index: 9999;
+        }
+
+        .location:hover .current-city {
+            background-color: white;
+            border: 1px solid rgb(204, 204, 204);
+            border-bottom: none;
+            padding-bottom: 1px;
+        }
+
+        .shortcut {
+            float: right;
+        }
+
+        .shortcut .line {
+            width: 1px;
+            height: 10px;
+            background-color: rgb(204, 202, 202);
+            margin: 10px 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 外部容器 -->
+    <div class="top-bar-wrapper">
+        <!-- 內部容器 -->
+        <div class="top-bar clearfix">
+            <!-- 左側選單 -->
+            <div class="location">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">台北</a>
+                </div>
+
+                <!-- 城市列表 -->
+                <div class="city-list">
+
+                </div>
+            </div>
+
+            <!-- 右側選單 -->
+            <ul class="shortcut clearfix">
+                <li>
+                    <a href="javascript:;">你好, 請登入</a>
+                    <a class="highlight" href="javascript:;">免費註冊</a>
+                </li>
+
+                <li class="line"></li>
+
+                <li><a href="javascript:;">我的訂單</a></li>
+
+                <li class="line"></li>
+
+                <li>
+                    <a href="javascript:;">我的最愛</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+
+                <li><a href="javascript:;">會員福利</a></li>
+
+                <li class="line"></li>
+
+                <li>
+                    <a class="highlight" href="javascript:;">企業採購</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+
+                <li>
+                    <span>客戶服務</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+
+                <li>
+                    <span>網站導航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+
+                <li>
+                    <span>手機模式</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

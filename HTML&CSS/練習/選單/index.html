@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 修復高度塌陷 */
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* 重置樣式表 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 背景 */
+        body {
+            background-image: url('https://cdn.jsdelivr.net/gh/NekoChanTaiwan/NekoChanTaiwan.github.io/images/index_img_1.webp');
+            background-size: cover;
+            height: 1000px;
+        }
+
+        /* 外部選單容器 */
+        .menu-container {
+            width: 100%;
+            position: fixed;
+            background-color: rgb(92, 94, 95);
+        }
+
+        /* 內部選單按鈕 */
+        .menu a {
+            text-decoration: unset;
+            font-size: 20px;
+            color: white;
+
+            margin: 0 10px;
+            float: left;
+        }
+
+        /* 二級選單 */
+        .second-menu div {
+            display: none;
+
+            position: absolute;
+        }
+
+        /* 二級選單 hover */
+        .second-menu:hover div {
+            display: block;
+            color: white;
+            background-color:rgb(92, 94, 95);
+        }
+
+        .second-menu li:hover {
+            color: rgb(92, 94, 95);
+            background-color: white;
+        }
+
+        /* 內部選單按鈕 hover */
+        .menu a:hover {
+            background-color: white;
+            color: rgb(92, 94, 95);
+        }
+
+        /* 內部選單文字 */
+        .menu li {
+            list-style-type: none;
+        }
+
+        /*-------------------------------------*/
+        .main-container{
+            /* margin-top: 10px; */
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu-container clearfix">
+        <ul class="menu clearfix">
+            <a href="">
+                <li>首頁</li>
+            </a>
+            <a class="second-menu" href="">
+                <li>分類</li>
+                <div>
+                    <li>測試1</li>
+                    <li>測試2</li>
+                    <li>測試3</li>
+                </div>
+            </a>
+            <a href="">
+                <li>漫畫</li>
+            </a>
+            <a href="">
+                <li>動漫</li>
+            </a>
+            <a href="">
+                <li>註冊</li>
+            </a>
+            <a href="">
+                <li>登入</li>
+            </a>
+            <a href="">
+                <li>聯絡</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main class="main-container">123</main>
+</body>
+</html>

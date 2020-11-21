@@ -66,6 +66,7 @@ a {
 .banner1-wrap {
     position: relative;
     top: 44px;
+    margin-bottom: 12px;
 }
 /* Banner1 文字 */
 .banner1-wrap .text{
@@ -77,7 +78,6 @@ a {
     text-align: center;
     margin-top: 48px;
     padding-top: 50px;
-    color: #bfa;
 }
 /* Banner1 圖片 */
 .banner1-wrap .banner1 {
@@ -162,15 +162,72 @@ a {
 /* --------------- Banner2樣式 --------------- */
 
 .banner2-wrap {
-    margin: 12px 0;
-    /* height: 692px; */
-    background-color: #bfa;
+    margin-top: 56px;
+    position: relative;
 }
 
 .banner2-wrap .banner2 {
-    background-color: #bfa;
     height: 692px;
     background: url('../img/banner2/iphone_12_large.jpg');
+    background-size: cover;
     background-position-x: center;
-    /* background-position-y: -100px; */
+}
+
+/* Banner2 文字 */
+.banner2-wrap .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 50px;
+    color: #111;
+}
+
+/* Banner2 標題 */
+.banner2-wrap .title {
+    color: rgb(29, 29, 31);
+    font-size: 50px;
+    font-weight: bold;
+}
+/* Banner2 副標題 */
+.banner2-wrap .sub-title {
+    color: rgb(29, 29, 31);
+    height: 31px;
+    font-size: 28px;
+    margin: 12px 0;
+    /* background-color: red; */
+}
+/* Banner2 內容資訊 */
+.banner2-wrap .info {
+    color: #86868b;
+    font-size: 18px;
+}
+/* Banner2 P1, P2內容高度 */
+.banner2-wrap .info .p1,
+.banner2-wrap .info .p2 {
+    height: 25px;
+}
+/* Banner2 連結, 圖標 樣式 */
+.banner2-wrap .link a,
+.banner2-wrap .link .fa-angle-right {
+    margin-top: 25px;
+    font-size: 19px;
+    color: rgb(0, 102, 204);
+}
+/* Banner2 圖標 樣式 */
+.banner2-wrap .link .fa-angle-right {
+    font-size: 14px;
+    margin-left: 5px;
+}
+/* Banner2 a1連結 樣式 */
+.banner2-wrap .a1 {
+    margin-right: 50px;
+}
+/* Banner2 連結 滑鼠移入後顏色改變 */
+.banner2-wrap .link a:hover {
+    text-decoration: underline rgb(0, 102, 204);
+    color: rgb(0, 102, 204);
 }

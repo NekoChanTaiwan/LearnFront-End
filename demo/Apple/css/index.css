@@ -11,6 +11,7 @@
 body {
     font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     font-size: 14px;
+    background-color: #fff;
 }
 /* 超連結 */
 a {
@@ -26,6 +27,8 @@ a {
 .nav-wrap {
     width: 100%;
     background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    z-index: 9999;
 }
 /* 導航欄 */
 .nav-wrap .nav {
@@ -59,11 +62,12 @@ a {
 }
 
 /* --------------- Banner1樣式 --------------- */
-
+/* Banner1 容器 */
 .banner1-wrap {
     position: relative;
+    top: 44px;
 }
-
+/* Banner1 文字 */
 .banner1-wrap .text{
     position: absolute;
     top: 0;
@@ -75,21 +79,21 @@ a {
     padding-top: 50px;
     color: #bfa;
 }
-
+/* Banner1 圖片 */
 .banner1-wrap .banner1 {
     background: url('../img/banner1/iphone_12_pro.jpg');
     background-position-x: center;
-    background-position-y: -60px;
+    /* background-position-y: -60px; */
     background-size: cover;
     height: 732px;
 }
-
+/* Banner1 標題 */
 .banner1-wrap .title {
     color: #f5f5f7;
     font-size: 50px;
     font-weight: bold;
 }
-
+/* Banner1 副標題 */
 .banner1-wrap .sub-title {
     color: #f5f5f7;
     height: 31px;
@@ -97,34 +101,33 @@ a {
     margin: 12px 0;
     /* background-color: red; */
 }
-
+/* Banner1 內容資訊 */
 .banner1-wrap .info {
     color: #86868b;
     font-size: 18px;
 }
-
+/* Banner1 P1, P2內容高度 */
 .banner1-wrap .info .p1,
 .banner1-wrap .info .p2 {
     height: 25px;
 }
-
+/* Banner1 連結, 圖標 樣式 */
 .banner1-wrap .link a,
 .banner1-wrap .link .fa-angle-right {
     margin-top: 25px;
     font-size: 19px;
     color: #2997ff;
 }
-
+/* Banner1 圖標 樣式 */
 .banner1-wrap .link .fa-angle-right {
     font-size: 14px;
-    /* padding-top: 5px; */
     margin-left: 5px;
 }
-
+/* Banner1 a1連結 樣式 */
 .banner1-wrap .a1 {
     margin-right: 50px;
 }
-
+/* Banner1 連結 滑鼠移入後顏色改變 */
 .banner1-wrap .link a:hover {
     text-decoration: underline #2997ff;
     color: #2997ff;
@@ -155,4 +158,19 @@ a {
 /* 通知連結圖標 */
 .notify-wrap .fa-angle-right {
     font-size: 10px;
+}
+/* --------------- Banner2樣式 --------------- */
+
+.banner2-wrap {
+    margin: 12px 0;
+    /* height: 692px; */
+    background-color: #bfa;
+}
+
+.banner2-wrap .banner2 {
+    background-color: #bfa;
+    height: 692px;
+    background: url('../img/banner2/iphone_12_large.jpg');
+    background-position-x: center;
+    /* background-position-y: -100px; */
 }

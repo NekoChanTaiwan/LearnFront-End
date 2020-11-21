@@ -160,19 +160,18 @@ a {
     font-size: 10px;
 }
 /* --------------- Banner2樣式 --------------- */
-
+/* Banner2 容器 */
 .banner2-wrap {
     margin-top: 56px;
     position: relative;
 }
-
+/* Banner2 圖片 */
 .banner2-wrap .banner2 {
     height: 692px;
     background: url('../img/banner2/iphone_12_large.webp');
     background-size: cover;
     background-position-x: center;
 }
-
 /* Banner2 文字 */
 .banner2-wrap .text{
     position: absolute;
@@ -185,7 +184,6 @@ a {
     padding-top: 50px;
     color: #111;
 }
-
 /* Banner2 標題 */
 .banner2-wrap .title {
     color: rgb(29, 29, 31);

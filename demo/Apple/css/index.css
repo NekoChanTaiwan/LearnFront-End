@@ -81,7 +81,7 @@ a {
 }
 /* Banner1 圖片 */
 .banner1-wrap .banner1 {
-    background: url('../img/banner1/iphone_12_pro.jpg');
+    background: url('../img/banner1/iphone_12_pro..webp');
     background-position-x: center;
     /* background-position-y: -60px; */
     background-size: cover;
@@ -168,7 +168,7 @@ a {
 
 .banner2-wrap .banner2 {
     height: 692px;
-    background: url('../img/banner2/iphone_12_large.jpg');
+    background: url('../img/banner2/iphone_12_large..webp');
     background-size: cover;
     background-position-x: center;
 }

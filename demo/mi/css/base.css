@@ -1,0 +1,31 @@
+/* 公共樣式表 */
+
+/* clearfix */
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* 去除超連結下劃線 */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 基礎樣式 */
+body {
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+    /* 防止body寬度過小導致容器溢出 */
+    min-width: 1226px;
+}
+
+/* 主體容器 */
+.w {
+    /* 固定容器寬度 */
+    width: 1226px;
+    /* 容器居中 */
+    margin: 0 auto;
+}

@@ -1,0 +1,561 @@
+/* index.html 樣式表 */
+
+/*------------------------------*/
+
+/* 頂部導航條容器 */
+.top-bar-wrapper {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+}
+
+/* 導航之間的線條 */
+.top-bar .line {
+    font-size: 12px;
+    color: #424242;
+    margin: 0 8px;
+}
+
+/* 導航樣式 */
+.top-bar a {
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+/* 導航移入效果 */
+.top-bar a:hover {
+    color: #fff;
+}
+
+/* 浮動 左側導航 */
+.service,
+.top-bar li {
+    float: left;
+}
+
+/* 浮動 右側導航, 購物車 */
+.shop-car,
+.user-info {
+    float: right;
+}
+
+/* 相對位置 */
+.app {
+    position: relative;
+}
+
+/* 移入滑鼠後顯示 */
+.app:hover .qrcode,
+.app:hover::after{
+    display: block;
+    height: 148px;
+}
+
+/* 半三角形 */
+.app::after {
+    display: none;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-top: none;
+    border-bottom-color: white;
+}
+
+/* 下載app的下拉二維碼 */
+.app .qrcode {
+    position: absolute;
+    left: -40px;
+    width: 124px;
+    height: 0;
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    color: #424242;
+    font-size: 14px;
+    transition: height .3s;
+    z-index: 9999;
+}
+
+/* 二維碼圖片 */
+.app .qrcode img {
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 12px;
+}
+
+/* 購物車 */
+.shop-car {
+    margin-left: 26px;
+    position: relative;
+}
+/* 購物車文字 */
+.shop-car a {
+    width: 120px;
+    background: #424242;
+    text-align: center;
+}
+/* 購物車圖標位置 */
+.shop-car i {
+    margin-right: 2px;
+}
+
+/* 購物車下拉物品 */
+.shop-car .items {
+    position: absolute;
+    /* bottom: -100px; */
+    top: 40px;
+    right: 0px;
+    width: 316px;
+    /* height: 100px; */
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 3px 5px rgba(0,0,0,.2);
+    line-height: 100px;
+    text-align: center;
+    transition: height .3s;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+/* 購物車滑鼠移入效果 */
+.shop-car:hover a {
+    background: #fff;
+    color: #ff6700;
+}
+
+/* 購物車滑鼠移入顯示下拉選單 */
+.shop-car:hover .items{
+    height: 100px;
+}
+
+/*------------------------------*/
+
+/* 頭部容器 */
+.header {
+    height: 100px;
+}
+
+.header-wrapper {
+    position: relative;
+}
+
+/* logo 位置 */
+.header .logo {
+    float: left;
+    margin-top: 22.5px;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    /* 隱藏logo文字 */
+    text-indent: -9999px;
+}
+
+/* logo 小米圖標 + 統一 logo 值 */
+.header .logo a {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    background-color: #ff6700;
+    background-image: url("../img/mi-logo.png");
+    background-position: center;
+    transition: left .3s;
+}
+
+/* logo home圖標 */
+.header .logo .home {
+    left: -55px;
+    background-image: url("../img/mi-home.png");
+}
+
+/* 滑鼠移入後移動兩個logo位置 */
+.logo:hover .mi {
+    left: 55px;
+}
+
+.logo:hover .home {
+    left: 0px;
+}
+
+/* 中間導航條 */
+.header .nav-wrapper {
+    float: left;
+    margin-left: 7px;
+}
+
+/* 導航條 */
+.header .nav {
+    /* width: 792px; */
+    height: 100px;
+    line-height: 100px;
+    padding-left: 58px;
+}
+
+/* 導航條中的連結 */
+.nav > li {
+    float: left;
+}
+
+/* 左側選單容器 */
+.items-wrapper {
+    position: relative;
+}
+
+/* 左側選單 */
+.left-menu {
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+    background-color: rgba(131, 131, 131, 0.5);
+    position: absolute;
+    z-index: 1000;
+    left: -120px;
+}
+
+ul.left-menu li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    margin-right: 0;
+    padding: 0 30px ;
+    font-size: 14px;
+}
+
+ul.left-menu li a:hover {
+    color: #fff;
+    background-color: #ff6700;
+}
+
+
+.left-menu a i {
+    float: right;
+    line-height: 42px;
+    font-size: 19px;
+}
+
+/* 字體樣式 */
+.nav-wrapper li a {
+    display: block;
+    font-size: 16px;
+    margin-right: 20px;
+    /* margin: 0 10px; */
+}
+
+.nav-wrapper li a:hover {
+    color: #ff6700;
+}
+
+/* 隱藏全部商品 */
+.hide {
+    visibility: hidden;
+}
+
+/* 全部商品 */
+.items-list {
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    overflow: hidden;
+    transition: height .5s;
+    background-color: #fff;
+    z-index: 9998;
+}
+
+/* 滑鼠移入後移動顯示下拉 */
+.nav .show:hover ~ .items-list,
+.items-list:hover {
+    height: 228px;
+    border-top: 1px solid rgb(224,224,224);
+    box-shadow: 0 5px 3px rgba(0,0,0,.2);
+}
+
+/* 搜尋框容器 */
+.search-wrapper {
+    /* background-color: #bfa; */
+    width: 296px;
+    height: 50px;
+    float: right;
+    margin-top: 25px;
+    border: 1px solid rgb(224,224,224);;
+}
+
+/* 搜尋框樣式 */
+.search-wrapper .search-inp{
+    float:left;
+    height: 50px;
+    width: 243px;
+    border: none;
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* 設置input獲取焦點後的樣式 */
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus + button{
+    /* outline: 1px solid #ff6700; */
+    outline: 1px solid #ff6700;
+}
+
+.search-wrapper .search-btn{
+    float:left;
+    width: 52px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    box-sizing: content-box;
+    background-color: #fff;
+    color: #616161;
+    font-size: 18px;
+    border-left: 1px solid rgb(224,224,224);
+    outline: none;
+}
+
+.search-wrapper .search-btn:hover {
+    background-color: #ff6700;
+    color: #fff;
+}
+
+/*------------------------------*/
+
+.banner {
+    position: relative;
+    height: 460px;
+}
+
+.banner .banner-show {
+    z-index: 1;
+}
+
+.banner .img-list li {
+    position: absolute;
+}
+
+.banner img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* 5個導航點 */
+.point {
+    position: absolute;
+    bottom: 22px;
+    right: 30px;
+    z-index: 99;
+}
+
+.point a{
+    float: left;
+    width: 7px;
+    height: 7px;
+    border: 2px solid rgba(255,255,255,.4);
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.4);
+    margin: 0 3px;
+}
+
+.point a:hover,
+.point a.active {
+    border: 2px solid rgba(0,0,0,.4);
+    background-color:rgba(255,255,255,.4);
+}
+
+.prev-next a {
+    width: 41px;
+    height: 69px;
+    background-image: url(../img/icon-slides.png);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 999;
+}
+
+.prev-next .prev {
+    left: 234px;
+    background-position: -84px 0;
+}
+
+.prev-next .prev:hover {
+    background-position: 0 0;
+}
+
+.prev-next .next {
+    right: 0;
+    background-position: -125px 0;
+}
+
+.prev-next .next:hover {
+    background-position: -42px 0;
+}
+
+/*------------------------------*/
+
+.right-tool {
+    width: 26px;
+    height: 206px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 160px;
+    right: 50%;
+    margin-right: -639px;
+    z-index: 999;
+
+    /*
+    * left + margin-left + width + margin-right + right = browser view
+    * auto + 0 + 0 + -639px + 50% = browser view
+    */
+}
+
+.right-tool a {
+    display: block;
+    width: 27px;
+    height: 42px;
+    background-color: #fff;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #f5f5f5;
+}
+
+.tool-phone {
+    background-image: url('../img/tool1.png');
+}
+
+.tool-phone:hover {
+    background-image: url('../img/tool2.png');
+}
+
+.tool-user {
+    background-image: url('../img/tool3.png');
+}
+
+.tool-user:hover {
+    background-image: url('../img/tool4.png');
+}
+
+.tool-setting {
+    background-image: url('../img/tool5.png');
+}
+
+.tool-setting:hover {
+    background-image: url('../img/tool6.png');
+}
+
+.tool-service {
+    background-image: url('../img/tool7.png');
+}
+
+.tool-service:hover {
+    background-image: url('../img/tool8.png');
+}
+
+.tool-shopcar {
+    background-image: url('../img/tool9.png');
+}
+
+.tool-shopcar:hover {
+    background-image: url('../img/tool10.png');
+}
+
+/*------------------------------*/
+
+/* 下部廣告區 */
+.ads {
+    height: 170px;
+    margin-top: 14px;
+}
+
+.ads .shortcut,
+.ads .ads-img,
+.ads li {
+    float: left;
+}
+
+/* 左側快捷 */
+.ads .shortcut {
+    width: 228px;
+    height: 168px;
+    background-color: #5d5750;
+    margin-right: 14px;
+    padding-top: 2px;
+    padding-left: 6px;
+}
+
+.ads .shortcut li {
+    position: relative;
+}
+
+.ads .shortcut li::before {
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 1px;
+    background-color: #665e57;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+}
+
+.ads .shortcut li:after {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 1px;
+    background-color: #665e57;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.ads .shortcut a {
+    display: block;
+    color: #cfccca;
+    height: 84px;
+    width: 76px;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.ads .shortcut i {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+.ads .shortcut a:hover {
+    color: #fff;
+}
+
+
+/* 右側圖片 */
+.ads .ads-img li {
+    width: 316px;
+    margin-right: 15px;
+}
+
+.ads .ads-img li:last-child{
+    margin: 0;
+}
+
+.ads .ads-img img {
+    width: 100%;
+    vertical-align: top;
+}

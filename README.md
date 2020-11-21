@@ -1,3 +1,3 @@
 ## DEMO
-- [小米](https://nekochan.cf/LearnFront-End/Demo/mi/)
-- [Apple]()
+- [小米](https://nekochan.cf/LearnFront-End/demo/mi/)
+- [Apple](https://nekochan.cf/LearnFront-End/demo/Apple/)

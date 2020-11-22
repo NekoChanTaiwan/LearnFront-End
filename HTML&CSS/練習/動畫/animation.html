@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box1 {
+            width: 100%;
+            height: 1000px;
+            /* overflow: hidden; */
+        }
+
+        .img1 {
+            width: 132px;
+            height: 271px;
+            margin: 100px auto;
+            background-image: url('./img/bigtap-mitu-queue-big.png');
+            /* animation-name: nekochan; */
+            /* animation-duration: 1s; */
+            /* animation-iteration-count: infinite; */
+            /* animation-timing-function: steps(4); */
+            animation: img1KF 1s infinite steps(4);
+        }
+
+        .img2 {
+            width: 256px;
+            height: 256px;
+            margin: 0 auto;
+            background-image: url(./img/bg2.png);
+            animation: img2KF 1s infinite steps(6);
+        }
+        @keyframes img1KF {
+            from {
+                background-position-x: 0px;
+            }
+            to {
+                /* background-position-x: 0px; */
+                background-position-x: 528px;
+            }
+        }
+        @keyframes img2KF {
+            from {
+                background-position-x: 1536px;
+            }
+            to {
+                background-position-x: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <!-- <div class="img3"></div> -->
+    </div>
+</body>
+</html>

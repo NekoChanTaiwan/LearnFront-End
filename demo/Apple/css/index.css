@@ -17,10 +17,6 @@ body {
 a {
     text-decoration: none;
 }
-/* 置中 */
-.mid {
-    margin: 0 auto;
-}
 
 /* --------------- 導航樣式 --------------- */
 /* 導航欄容器 */
@@ -33,12 +29,11 @@ a {
 /* 導航欄 */
 .nav-wrap .nav {
     width: 1000px;
+    margin: 0 auto;
 }
 /* 導航欄 選單 */
 .nav-wrap .nav a {
     float: left;
-    display: block;
-    height: 100%;
     margin: 0 35px;
     line-height: 44px;
     font-weight: 400;

@@ -1,0 +1,90 @@
+/* --------------- clearfix --------------- */
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* --------------- 全局設定 --------------- */
+
+body {
+    background-color: gray;
+    font-family: segoeui,Microsoft JhengHei,sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* --------------- 上方導航欄 --------------- */
+/* 導航容器 */
+.nav-wrap {
+    width: 100%;
+    background-color: #202020;
+}
+/* 內部導航欄 */
+.nav-wrap .nav {
+    width: 1520px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+}
+/* 左側logo */
+.nav .logo1 img{
+    display: inline-block;
+    width: 200px;
+    height: 36px;
+    margin-top: 12px;
+    position: relative;
+    left: -8px
+}
+/* 中間選單容器 */
+.nav-wrap .menu {
+    position: absolute;
+    top: 0;
+    left: 520px;
+}
+/* 中間選單 */
+.nav-wrap .menu a {
+    float: left;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 14px;
+}
+/* 中間選單 當滑鼠游標移上後更改顏色 */
+.nav-wrap .menu a:hover {
+    color: red;
+}
+
+/* 右側選單 */
+.nav-wrap .right {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    color: #fff;
+}
+
+.nav-wrap .right i {
+    line-height: 60px;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.nav-wrap .right i:hover {
+    color: red;
+}
+
+.nav-wrap .logo2 {
+    position: absolute;
+    top: 22px;
+    right: 115px;
+    background-image: url('../img/logo/asus.png');
+    height: 18px;
+    width: 71px;
+}
+
+.nav-wrap .logo2:hover {
+    background-position-x: 73px;
+}

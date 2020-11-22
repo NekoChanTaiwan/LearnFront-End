@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 重置 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 背景 */
+        body {
+            background-color: gray;
+        }
+        /* 時鐘樣式 */
+        .clock {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background-color: #bfa;
+            margin: 100px auto;
+            position: relative;
+        }
+        /* 時鐘內部的DIV設定 */
+        .clock > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+        /* 秒針容器 */
+        .sec-wrap {
+            width: 100%;
+            height: 95%;
+            animation: time 60s steps(60) infinite;
+        }
+        /* 秒針 */
+        .sec {
+            width: 3px;
+            height: 50%;
+            background-color: red;
+            margin: auto;
+        }
+        /* 分針容器 */
+        .min-wrap {
+            width: 100%;
+            height: 80%;
+            animation: time 3600s steps(60) infinite;
+        }
+        /* 分針 */
+        .min {
+            width: 5px;
+            height: 50%;
+            background-color: yellow;
+            margin: auto;
+        }
+        /* 時針容器 */
+        .hour-wrap {
+            width: 100%;
+            height: 60%;
+            animation: time 43200s infinite;
+        }
+        /* 時針 */
+        .hour {
+            width: 5px;
+            height: 50%;
+            background-color: blue;
+            margin: auto;
+        }
+        /* 時間動畫 */
+        @keyframes time {
+            from {
+                transform: rotateZ(0);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="sec-wrap">
+            <div class="sec"></div>
+        </div>
+        <div class="min-wrap">
+            <div class="min"></div>
+        </div>
+        <div class="hour-wrap">
+            <div class="hour"></div>
+        </div>
+    </div>
+</body>
+</html>

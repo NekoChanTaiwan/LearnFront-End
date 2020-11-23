@@ -42,9 +42,6 @@ body {
 	text-align: center;
 	line-height: 25px;
 }
-.img {
-	margin-bottom: 25px;
-}
 
 /* 右邊 */
 .right {
@@ -53,10 +50,8 @@ body {
 }
 /* 右邊圖 */
 .right .img {
-	height: 400px;
-	background: url('../img/cube/pixiv78801634.jpg') center center no-repeat;
+	background: url('../img/cube/pixiv78801634.webp') center center no-repeat;
 	background-size: 300px;
-	transition: 1s;
 }
 /* 左邊 */
 .left {
@@ -65,10 +60,8 @@ body {
 }
 /* 左邊圖 */
 .left .img {
-	height: 400px;
-	background: url('../img/cube/pixiv83038160.jpg') center center no-repeat;
+	background: url('../img/cube/pixiv83038160.webp') center center no-repeat;
 	background-size: 300px;
-	transition: 1s;
 }
 /* 後面 */
 .back {
@@ -77,10 +70,8 @@ body {
 }
 /* 後面圖 */
 .back .img {
-	height: 400px;
-	background: url('../img/cube/pixiv79807311.jpg') center center no-repeat;
+	background: url('../img/cube/pixiv79807311.webp') center center no-repeat;
 	background-size: 300px;
-	transition: 1s;
 }
 /* 前面 */
 .front {
@@ -89,10 +80,14 @@ body {
 }
 /* 前面圖 */
 .front .img {
-	height: 400px;
-	background: url('../img/cube/pixiv85628748.jpg') center center no-repeat;
+	background: url('../img/cube/pixiv85628748.webp') center center no-repeat;
 	background-size: 350px;
 	background-position: center;
+}
+
+.img {
+	height: 400px;
+	margin-bottom: 25px;
 	transition: 1s;
 }
 

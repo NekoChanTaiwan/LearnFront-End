@@ -1,0 +1,66 @@
+// 超連結統一設定
+a {
+    text-decoration: none;
+    color:rgba(0,0,0,0.87);
+}
+// 兩側邊距
+.mid{
+    margin: 0 30px;
+}
+// 上方導航欄容器
+.top-bar-wrap:extend(.mid) {
+    width: 166px;
+    position: absolute;
+    top: 16px;
+    right: 0;
+    // 導航欄
+    .top-bar {
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+        line-height: 32px;
+        font-size: 13px;
+        // 選單
+        .menu {
+            position: relative;
+            // 選單圖標
+            .fa-bars {
+                color: rgba(0,0,0,0.6);
+                font-size: 14px;
+                // 滑鼠移入後
+                &:hover {
+                    color: #000;
+                    // 顯示隱藏選單
+                    .hide-menu {
+                        display: block;
+                    }
+                }
+            }
+            // 隱藏選單
+            .hide-menu {
+                display: none;
+                width: 316px;
+                height: 436px;
+                position: absolute;
+                right: -53px;
+                margin-top: 13px;
+                border: 1px solid #cccccc;
+                border-radius: 3%;
+                box-shadow: 0 0 5px rgba(0,0,0,0.6) ;
+            }
+        }
+        // 導航欄項目滑鼠移入後
+        .item:hover a {
+            text-decoration: underline;
+            opacity: .85;
+        }
+        // 使用者頭像
+        .user a {
+            display: block;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-image: url('./img/user/unnamed.png');
+        }
+    }
+}

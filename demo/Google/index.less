@@ -28,13 +28,6 @@ a {
                 color: rgba(0,0,0,0.6);
                 font-size: 14px;
                 // 滑鼠移入後
-                &:hover {
-                    color: #000;
-                    // 顯示隱藏選單 （問題：無法顯示）
-                    .hide-menu {
-                        display: block;
-                    }
-                }
             }
             // 隱藏選單
             .hide-menu {
@@ -47,6 +40,13 @@ a {
                 border: 1px solid #cccccc;
                 border-radius: 3%;
                 box-shadow: 0 0 5px rgba(0,0,0,0.6) ;
+            }
+            &:hover {
+                color: #000;
+                // 顯示隱藏選單
+                .hide-menu {
+                    display: block;
+                }
             }
         }
         // 導航欄項目滑鼠移入後

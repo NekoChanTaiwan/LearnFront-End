@@ -1,0 +1,152 @@
+a {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+        color: #757474;
+    }
+}
+.top-bar-wrapper {
+    background-color: #000;
+}
+// 導航欄外部容器
+.top-bar {
+    height: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 14px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// 左側導航圖標
+.left-menu {
+    // 顯示隱藏選單
+    &:active {
+        .nav {
+            display: block;
+        }
+    }
+    // 選單
+    .nav {
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #000;
+        padding-top: 50px;
+        li{
+            width: 80%;
+            margin: 0 auto;
+            border-bottom: 1px solid #757474;
+            a {
+                display: block;
+                line-height: 44px;
+                font-size: 14px;
+            }
+            &:last-child a {
+                display: inline-block;
+                margin-right: 6px;
+            }
+            span {
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+    .menu-icon {
+        width: 18px;
+        height: 48px;
+        position: relative;
+        // 島航圖標樣式
+        li {
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            transform-origin: left center;
+            transition: 0.3s;
+        }
+        li:nth-child(1) {
+            top: 18px;
+        }
+        li:nth-child(2) {
+            top: 24px;
+        }
+        li:nth-child(3) {
+            top: 30px;
+        }
+        // 游標移入時
+        &:active {
+            li:nth-child(1) {
+                transform: rotateZ(40deg);
+            }
+            li:nth-child(2) {
+                opacity: 0;
+            }
+            li:nth-child(3) {
+                transform: rotateZ(-40deg);
+            }
+        }
+    }
+}
+
+// logo
+.logo {
+    a {
+        text-indent: -9999px; // * 不熟
+        display: block;
+        width: 122px;
+        height: 32px;
+        background: url('./img/dff63979.sprites-index@2x.png');
+        background-size: 400px 400px;
+    }
+}
+
+// 媒體查詢
+@media only screen {
+    // 斷點 768px
+    @media (min-width: 768px) {
+        body {
+            .left-menu {
+                order: 2;
+                flex: auto;
+                .nav {
+                    display: flex;
+                    position: static;
+                    padding: 0;
+                    justify-content: space-around;
+                    li {
+                        width: auto;
+                        border-bottom: none;
+                        margin: 0;
+                        a {
+                            line-height: 48px;
+                        }
+                        span {
+                            display: none;
+                        };
+                    }
+                }
+                .menu-icon {
+                    display: none;
+                }
+                // * 修復 原版 bug
+                &:active {
+                    .nav {
+                        display: flex;
+                    }
+                }
+            }
+            .logo {
+                order: 1;
+            }
+            .user-info {
+                order: 3;
+            }
+        }
+    }
+}

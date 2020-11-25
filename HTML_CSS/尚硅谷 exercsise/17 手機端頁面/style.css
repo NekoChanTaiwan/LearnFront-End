@@ -7,11 +7,11 @@
 .banner,
 .menu,
 .course-list {
-  width: 17.325rem;
+  width: 13.86rem;
   margin: 0 auto;
 }
 html {
-  font-size: 5.33333333vw;
+  font-size: 6.66666667vw;
   background-color: #eff0f4;
 }
 a {
@@ -19,39 +19,39 @@ a {
 }
 .top-bar {
   display: flex;
-  height: 4.375rem;
-  line-height: 4.375rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
   justify-content: space-between;
   align-items: center;
 }
 .top-bar a {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #242535;
 }
 .top-bar a i {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #999;
 }
 .banner img {
   width: 100%;
 }
 .menu {
-  height: 8.25rem;
+  height: 6.6rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-content: space-evenly;
 }
 .menu a {
-  width: 8.175rem;
-  height: 2.6rem;
-  border-radius: 0.25rem;
-  line-height: 2.6rem;
-  font-size: 0.75rem;
+  width: 6.54rem;
+  height: 2.08rem;
+  border-radius: 0.2rem;
+  line-height: 2.08rem;
+  font-size: 0.6rem;
   color: white;
 }
 .menu a i {
-  margin: 0 0.75rem 0 0.95rem;
+  margin: 0 0.6rem 0 0.76rem;
 }
 .menu .class {
   background: #f97053;
@@ -60,17 +60,17 @@ a {
   background: #cd6efe;
 }
 .menu .sub {
-  background: #f97053;
+  background: #fe4479;
 }
 .menu .download {
   background: #1bc4fb;
 }
 .course-list {
-  height: 9.85rem;
+  height: 7.88rem;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.92rem;
 }
 .course-list .title {
   display: flex;
@@ -78,31 +78,31 @@ a {
   align-items: center;
 }
 .course-list h2 {
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   color: #24253d;
-  border-left: 0.125rem solid #3a84ff;
-  padding-left: 0.5rem;
+  border-left: 0.1rem solid #3a84ff;
+  padding-left: 0.4rem;
 }
 .course-list a {
-  font-size: 0.7rem;
+  font-size: 0.56rem;
   color: #656565;
 }
 .item-list {
-  width: 18rem;
-  height: 10rem;
+  width: 14.4rem;
+  height: 8rem;
   display: flex;
   overflow: auto;
 }
 .item {
   flex: none;
   box-sizing: border-box;
-  width: 8rem;
-  height: 8.1rem;
-  padding: 0 0.55rem;
-  margin-right: 0.6rem;
+  width: 6.4rem;
+  height: 6.48rem;
+  padding: 0 0.44rem;
+  margin-right: 0.48rem;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 0.25rem;
+  border-radius: 0.2rem;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
@@ -112,7 +112,7 @@ a {
   vertical-align: top;
 }
 .item .course-title {
-  font-size: 0.7rem;
+  font-size: 0.56rem;
   color: #24253d;
 }
 .item .user-info {
@@ -120,11 +120,11 @@ a {
   align-items: center;
 }
 .item .avatar {
-  width: 1.05rem;
-  height: 1.05rem;
+  width: 0.84rem;
+  height: 0.84rem;
 }
 .item .username {
-  margin-left: 0.25rem;
-  font-size: 0.6rem;
+  margin-left: 0.2rem;
+  font-size: 0.48rem;
   color: #969393;
 }

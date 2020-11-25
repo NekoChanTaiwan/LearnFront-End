@@ -30,6 +30,7 @@ a {
   display: none;
   width: 316px;
   height: 436px;
+  background: #fff;
   position: absolute;
   right: -53px;
   margin-top: 13px;
@@ -53,4 +54,20 @@ a {
   height: 32px;
   border-radius: 50%;
   background-image: url('./img/user/unnamed.png');
+  position: relative;
+}
+.top-bar-wrap .top-bar .user a .hide-menu {
+  display: none;
+  width: 354px;
+  height: 385px;
+  background: #fff;
+  position: absolute;
+  right: 0px;
+  margin-top: 45px;
+  border: 1px solid #cccccc;
+  border-radius: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.top-bar-wrap .top-bar .user a:hover .hide-menu {
+  display: block;
 }

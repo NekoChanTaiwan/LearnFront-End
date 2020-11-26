@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        span,
+        .image {
+            display: block;
+        }
+        .img-wrap {
+            width: 500px;
+            height: 500px;
+            /* background-color: #bfa; */
+            margin: 100px auto;
+            text-align: center;
+        }
+        .img-wrap .image {
+            width: 300px;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            // 圖片數列
+            const imgArray = ["./img/pixiv85628748.webp", "./img/pixiv83038160.webp", "./img/pixiv79807311.webp", "./img/pixiv78801634.webp", ];
+            // 圖片索引長度(並免不必要的計算)
+            const imgLength = imgArray.length - 1;
+            // 目前圖片索引
+            let index = 0;
+
+            // 獲取 span 標籤
+            const span = document.getElementsByTagName("span")[0];
+            // 獲取 img 標籤
+            const img = document.getElementsByTagName("img")[0];
+            // 獲取 prev 類
+            const prevBtn = document.getElementsByClassName("prev")[0];
+            // 獲取 next 類
+            const nextBtn = document.getElementsByClassName("next")[0];
+
+            // 函式 imgPos 顯示目前圖片索引位置
+            const imgPos = () => span.innerHTML = `所有圖片:${imgArray.length} / 目前圖片:${index + 1}`;
+            imgPos();
+            // 函式 prev.onlick
+            prevBtn.onclick = () => {
+                index--;
+                if (index < 0) index = 3;
+                img.src = imgArray[index];
+                imgPos();
+            }
+            // 函式 next.onlick
+            nextBtn.onclick = () => {
+                index++;
+                if (index > imgLength) index = 0;
+                img.src = imgArray[index];
+                imgPos();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="img-wrap">
+        <span>讀取圖片中</span>
+        <img class="image" src="./img/pixiv85628748.webp">
+        <button class="prev">上一張</button>
+        <button class="next">下一張</button>
+    </div>
+    </div>
+</body>
+</html>

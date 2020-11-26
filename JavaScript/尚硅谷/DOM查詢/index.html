@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css.css">
+	<title>Document</title>
+	<script>
+		window.onload = () => {
+			// 查找 #xb 節點
+			const btn01 = document.getElementById("btn01");
+			btn01.onclick = () => {
+				console.log(document.getElementById("xb").innerHTML);
+			}
+			// 查找所有 li 節點
+			const btn02 = document.getElementById("btn02");
+			btn02.onclick = () => {
+				console.log(document.getElementsByTagName("li"));
+			}
+			// 查找 name=gender 的所有節點
+			const btn03 = document.getElementById("btn03");
+			btn03.onclick = () => {
+				console.log(document.getElement);
+			}
+			// 查找 #city 下所有 li 節點
+			// 返回 #city 的所有子節點
+			// 返回 #phone 的第一個子節點
+			// 返回 #xb 的父節點
+			// 返回 #android 的前一個兄弟節點
+			// 讀取 #username 的 value 屬性值
+			// 設置 #username 的 value 屬性值
+			// 返回 #xb 的文本值
+		};
+	</script>
+</head>
+<body>
+	<div id="total">
+		<div class="inner">
+			<p>
+				你喜歡哪個城市?
+			</p>
+
+			<ul id="city">
+				<li id="bj">新北</li>
+				<li>胡志明市</li>
+				<li>東京</li>
+				<li>火星</li>
+			</ul>
+
+			<br>
+			<br>
+
+			<p>
+				你喜歡哪款單機遊戲?
+			</p>
+
+			<ul id="game">
+				<li id="rl">紅警</li>
+				<li>實況</li>
+				<li>極速飛車</li>
+				<li>魔獸</li>
+			</ul>
+
+			<br />
+			<br />
+
+			<p>
+				你手機的操作系統是?
+			</p>
+
+			<ul id="phone"><li>IOS</li><li id="android">Android</li><li>Windows Phone</li></ul>
+		</div>
+
+		<div class="inner">
+			gender:
+			<input class="hello" type="radio" name="gender" value="male"/>
+			Male
+			<input class="hello" type="radio" name="gender" value="female"/>
+			Female
+			<br>
+			<br>
+			name:
+			<input type="text" name="name" id="username" value="abcde"/>
+		</div>
+	</div>
+	<div id="btnList">
+		<div><button id="btn01">查找 #xb 節點</button></div>
+		<div><button id="btn02">查找所有 li 節點</button></div>
+		<div><button id="btn03">查找 name=gender 的所有節點</button></div>
+		<div><button id="btn04">查找 #city 下所有 li 節點</button></div>
+		<div><button id="btn05">返回 #city 的所有子節點</button></div>
+		<div><button id="btn06">返回 #phone 的第一個子節點</button></div>
+		<div><button id="btn07">返回 #xb 的父節點</button></div>
+		<div><button id="btn08">返回 #android 的前一個兄弟節點</button></div>
+		<div><button id="btn09">返回 #username 的 value 屬性值</button></div>
+		<div><button id="btn10">設置 #username 的 value 屬性值</button></div>
+		<div><button id="btn11">返回 #xb 的文本值</button></div>
+	</div>
+</body>
+</html>

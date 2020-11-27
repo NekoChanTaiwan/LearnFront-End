@@ -4,39 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DOM 練習 - Waifu Selector</title>
-	<meta name="Description" content="DOM練習 By NekoChan">
-    <meta property="og:title" content="Waifu Selector">
-    <meta property="og:description" content="DOM練習 By NekoChan">
+	<meta name="Description" content="By NekoChan">
+    <meta property="og:title" content="DOM 練習 - Waifu Selector">
+    <meta property="og:description" content="By NekoChan">
     <meta property="og:url" content="#">
     <meta property="og:locale" content="zh-Hant-TW">
-    <meta property="og:image" content="https://nekochan.cf/LearnFront-End/demo/MyWaifu/img/cube/pixiv85628748.webp">
+    <meta property="og:image" content="https://nekochan.cf/LearnFront-End/JavaScript/demo/DOM練習/img/pixiv82432064.webp">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Waifu Selector">
-	<style>
-
-		form{
-			margin-top: 50px;
-		}
-
-		.title,
-		.top-wrap,
-		.checkbox-wrap,
-		.button-wrap {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 25px;
-			line-height: 30px;
-		}
-
-		.title {
-			font-size: 35px;
-		}
-	</style>
-	<script src="./script.js"></script>
+	<meta property="og:site_name" content="DOM 練習 - Waifu Selector">
+	<link rel="stylesheet" href="./css/style.min.css">
+	<script src="./js/script.js"></script>
 </head>
 <body>
-    <form method="post" action="">
+	<div class="img-left">
+		<img src="./img/pixiv82432064.webp">
+	</div>
+    <form class="wrap" method="post" action="">
 		<p class="title"> DOM 練習 - Waifu Selector</p>
         <div class="top-wrap">
             你最喜歡的老婆是？<input type="checkbox" id="checkedAllBox" />全選/全不選
@@ -52,7 +35,13 @@
             <input type="button" id="checkedNoBtn" value="全不選" />
             <input type="button" id="checkedRevBtn" value="反　選" />
             <input type="button" id="sendBtn" value="提　交" />
-        </div>
+		</div>
 	</form>
+	<div class="img-mid">
+		<img src="./img/pixiv85628748.webp">
+	</div>
+	<div class="img-right">
+		<img src="./img/pixiv73247540.webp">
+	</div>
 </body>
 </html>

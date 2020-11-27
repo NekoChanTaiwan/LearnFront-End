@@ -3,35 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css.css">
+	<link rel="stylesheet" href="./style.css">
+	<script src="script.js"></script>
 	<title>Document</title>
-	<script>
-		window.onload = () => {
-			// 查找 #xb 節點
-			const btn01 = document.getElementById("btn01");
-			btn01.onclick = () => {
-				console.log(document.getElementById("xb").innerHTML);
-			}
-			// 查找所有 li 節點
-			const btn02 = document.getElementById("btn02");
-			btn02.onclick = () => {
-				console.log(document.getElementsByTagName("li"));
-			}
-			// 查找 name=gender 的所有節點
-			const btn03 = document.getElementById("btn03");
-			btn03.onclick = () => {
-				console.log(document.getElement);
-			}
-			// 查找 #city 下所有 li 節點
-			// 返回 #city 的所有子節點
-			// 返回 #phone 的第一個子節點
-			// 返回 #xb 的父節點
-			// 返回 #android 的前一個兄弟節點
-			// 讀取 #username 的 value 屬性值
-			// 設置 #username 的 value 屬性值
-			// 返回 #xb 的文本值
-		};
-	</script>
 </head>
 <body>
 	<div id="total">
@@ -41,7 +15,7 @@
 			</p>
 
 			<ul id="city">
-				<li id="bj">新北</li>
+				<li id="xb">新北</li>
 				<li>胡志明市</li>
 				<li>東京</li>
 				<li>火星</li>

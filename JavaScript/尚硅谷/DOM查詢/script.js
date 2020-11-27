@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * * click function
  * @param idStr button ID(string)

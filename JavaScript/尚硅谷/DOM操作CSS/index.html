@@ -18,16 +18,27 @@
                 const btn = document.getElementById(strId);
                 btn.onclick = func;
             }
-            const box1 = document.getElementById("box1");
+
+            let getStyle = (element, style) => {
+                if (window.getComputedStyle) {
+                    return getComputedStyle(element, null)[style];
+                } else {
+                    return element.currentStyle[style]; // 意思一下
+                }
+            }
+
+            let box1 = document.getElementById("box1");
 
             click("btn1", () => {
-                box1.style.width = "300px";
-                box1.style.height = "300px";
-                box1.style.backgroundColor = "yellow";
+                // box1.style.width = "300px";
+                // box1.style.height = "300px";
+                // box1.style.backgroundColor = "yellow";
+                // console.log(getComputedStyle(box1, null).width);
+                console.log(getStyle(box1, "height"));
             });
 
             click("btn2", () => {
-                console.log(box1.style.backgroundColor);
+                // console.log(box1.style.backgroundColor);
             });
         }
     </script>

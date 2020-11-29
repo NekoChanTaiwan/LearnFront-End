@@ -22,9 +22,6 @@ window.onload = () => {
     }
 
     // 新增功能
-    /**
-     * 點擊按鈕，新增員工資訊
-     */
     click(document.getElementById("addEmpButton"), () => {
         // 獲取 input值
         let name = document.getElementById("empName").value;

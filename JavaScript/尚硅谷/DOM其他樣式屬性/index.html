@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            padding: 10px;
+            border: 10px solid yellow;
+        }
+        #box2 {
+            /* position: relative; */
+        }
+        #wrap {
+            width: 500px;
+            height: 600px;
+            background-color: #bfa;
+            overflow: auto;
+            text-align: center;
+        }
+        #text {
+            background-color: skyblue;
+        }
+    </style>
+    <script>
+        let click = (idStr, func) => {
+            const btn = document.getElementById(idStr);
+            btn.onclick = func;
+        };
+
+        window.onload = () => {
+            // const box1 = document.getElementById("box1");
+            // click("btn1", () => {
+            //     console.log(`clientWidth:${box1.clientWidth}`);
+            //     console.log(`clientHeight:${box1.clientHeight}`);
+            //     console.log(`offsetWidth:${box1.offsetWidth}`);
+            //     console.log(`offsetHeight${box1.offsetHeight}`);
+            //     console.log(`offsetParent:${box1.offsetParent.id}`);
+            //     console.log(`offsetLeft:${box1.offsetLeft}`);
+            //     console.log(`offsetTop${box1.offsetTop}`);
+            // });
+
+            const wrap = document.getElementById("wrap");
+            const input = document.getElementsByTagName("input");
+            const btn2 = document.getElementById("btn2");
+            wrap.onscroll = () => {
+                console.log(wrap.scrollHeight - wrap.scrollTop);
+                if (wrap.scrollHeight - wrap.scrollTop == wrap.clientHeight) {
+                    console.log("unlock");
+                    input[0].disabled = false;
+                    input[1].disabled = false;
+                }
+            };
+            click("btn3", () => {
+                console.log(wrap.scrollHeight - wrap.scrollTop);
+            });
+        };
+    </script>
+</head>
+<body>
+    <!-- <button id="btn1">BTN</button>
+    <br><br>
+    <div id="box2">
+        <div id="box1"></div>
+    </div> -->
+    請先仔細閱讀用戶協議
+    <div id="wrap">
+        <div id="text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, sed nulla repellendus labore error, repudiandae reprehenderit corrupti culpa ut tenetur amet, aspernatur fugiat! Et dolor voluptate tempore accusantium vel mollitia!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laudantium magnam eveniet sit voluptate quia vitae animi illum quaerat, corrupti enim dolorum sint placeat sunt nihil, dolor harum architecto non.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, excepturi ut eos assumenda molestias fugit alias reiciendis laborum, illo natus itaque nihil eius provident, possimus explicabo quasi molestiae adipisci non.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quas maxime sequi sint fugiat ad molestiae a dolores voluptates eos? At impedit veniam possimus suscipit neque nam, laboriosam consequuntur aperiam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum deserunt dicta, consectetur tenetur consequatur expedita aspernatur amet dolores dignissimos beatae facilis similique in totam quisquam commodi. Quibusdam esse nulla id?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, ex eum minima non, veritatis laboriosam numquam quia illum ipsum, culpa quisquam. Earum, omnis architecto officia nulla quae quibusdam deleniti mollitia.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, totam illo, ea id officiis neque deleniti inventore voluptatum voluptas non cupiditate commodi, odio consequuntur doloribus nisi quo in. Suscipit, blanditiis?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nihil ratione sequi nulla. Ipsam dignissimos dolore ratione neque fugiat itaque facere velit nobis sapiente? Vero maxime consequuntur amet maiores provident.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, assumenda earum accusamus placeat beatae eveniet ipsum at, omnis molestias deserunt, totam magnam consequuntur eligendi. Voluptatum corrupti modi assumenda in molestias.
+        </div>
+    </div>
+    <input type="checkbox" disabled="disabled" />我已仔細閱讀協議
+    <input type="submit" value="註冊" disabled="disabled">
+    <br>
+    <button id="btn3">test</button>
+</body>
+</html>

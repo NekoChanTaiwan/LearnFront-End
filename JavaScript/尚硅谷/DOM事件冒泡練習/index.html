@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ul {
+            /* background-color: #bfa; */
+        }
+    </style>
+    <script>
+        let click = function (idStr, func) {
+            document.getElementById(idStr).onclick = func;
+        };
+        window.onload = () => {
+            click("ul", (event) => {
+                if (event.target.className == "link") {
+                    console.log("class == link");
+                }
+            });
+            click("btn1", () => {
+                let li = document.createElement("li");
+                li.innerHTML = `<a class="link" href="javascript:;">新超連結</a>`;
+                document.getElementById("ul").appendChild(li);
+            });
+        };
+    </script>
+</head>
+<body>
+    <button id="btn1">點我</button>
+    <ul id="ul">
+        <li><a class="link" href="javascript:;">超連結一</a></li>
+        <li><a class="link" href="javascript:;">超連結二</a></li>
+        <li><a class="link" href="javascript:;">超連結三</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            const box1 = document.getElementById("box1");
+            document.onmousemove = (event) => {
+                // box1.style.left = `${event.clientX + document.documentElement.scrollLeft}px`;
+                // box1.style.top = `${event.clientY + document.documentElement.scrollTop}px`;
+                box1.style.left = `${event.pageX}px`;
+                box1.style.top = `${event.pageY}px`;
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>

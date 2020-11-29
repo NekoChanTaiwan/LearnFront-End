@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #areaDiv {
+            border: 1px solid black;
+            width: 300px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        #showMsg {
+            border: 1px solid black;
+            width: 300px;
+            height: 20px;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            const areaDiv = document.getElementById("areaDiv");
+            const showMsg = document.getElementById("showMsg");
+            let x, y;
+            areaDiv.onmousemove = (event) => {
+                x = event.clientX;
+                y = event.clientY;
+                showMsg.innerHTML = `x = ${x} y = ${y}`;
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="areaDiv"></div>
+	<div id="showMsg"></div>
+</body>
+</html>

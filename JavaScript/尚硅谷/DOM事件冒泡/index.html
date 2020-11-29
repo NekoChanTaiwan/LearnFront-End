@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh=Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+        #s1 {
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            let click = (idStr, func) => {
+                document.getElementById(idStr).onclick = func;
+            };
+
+            click("s1", (event) => {
+                console.log("我是span");
+                event.cancelBubble = true;
+            });
+            click("box1", () => {
+                console.log("我是box1");
+                event.cancelBubble = true;
+            });
+            document.body.onclick = () => {
+                console.log("我是body");
+                event.cancelBubble = true;
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="box1">
+        <span id="s1">我是sapn</span>
+    </div>
+</body>
+</html>

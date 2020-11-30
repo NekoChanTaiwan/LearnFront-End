@@ -21,25 +21,23 @@
     </style>
     <script>
         window.onload = function() {
-            let speed = 50;
-            document.onkeydown = (event) => {
-                console.log(event.code);
-                if (event.key == "a" || event.key == "ArrowLeft") {
+            let speed = 50, dir;
+            let move = setInterval(function() {
+                if (dir == "KeyW" || dir == "ArrowUp") {
+                    box1.style.top = `${box1.offsetTop - speed}px`;
+                } else if (dir == "KeyS" || dir == "ArrowDown") {
+                    box1.style.top = `${box1.offsetTop + speed}px`;
+                } else if (dir == "KeyA" || dir == "ArrowLeft") {
                     box1.style.left = `${box1.offsetLeft - speed}px`;
-                }
-                if (event.key == "d" || event.key == "ArrowRight") {
+                } else if (dir == "KeyD" || dir == "ArrowRight") {
                     box1.style.left = `${box1.offsetLeft + speed}px`;
                 }
-                if (event.key == "s" || event.key == "ArronDown") {
-                    box1.style.top = `${box1.offsetTop + speed}px`;
-                }
-                if (event.key == "w" || event.key == "ArronUp") {
-                    box1.style.top = `${box1.offsetTop - speed}px`;
-                }
-                if (event.code == "Space") {
-                    speed += 10;
-                }
-                return false;
+            }, 30)
+            document.onkeydown = (event) => {
+                dir = event.code;
+            };
+            document.onkeyup = () => {
+                dir = null;
             };
         };
     </script>

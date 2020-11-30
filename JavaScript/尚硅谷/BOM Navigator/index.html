@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var browser = navigator.userAgent;
+            if (/Edg/i.test(browser)) {
+                console.log("Edge瀏覽器")
+            } else if (/Chrome/i.test(browser)) {
+                console.log("Chrome瀏覽器");
+            } else if (/firefox/i.test(browser)) {
+                console.log("Firefox瀏覽器");
+            } else if ("ActiveXObject" in window) {
+                console.log("垃圾IE");
+            }
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>

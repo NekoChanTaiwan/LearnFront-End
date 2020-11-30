@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transition: all .1s;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let speed = 50;
+            document.onkeydown = (event) => {
+                console.log(event.code);
+                if (event.key == "a" || event.key == "ArrowLeft") {
+                    box1.style.left = `${box1.offsetLeft - speed}px`;
+                }
+                if (event.key == "d" || event.key == "ArrowRight") {
+                    box1.style.left = `${box1.offsetLeft + speed}px`;
+                }
+                if (event.key == "s" || event.key == "ArronDown") {
+                    box1.style.top = `${box1.offsetTop + speed}px`;
+                }
+                if (event.key == "w" || event.key == "ArronUp") {
+                    box1.style.top = `${box1.offsetTop - speed}px`;
+                }
+                if (event.code == "Space") {
+                    speed += 10;
+                }
+                return false;
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>

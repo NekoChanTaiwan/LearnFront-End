@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #line {
+            width: 0;
+            height: 1000px;
+            border: 1px solid black;
+            position: absolute;
+            left: 400px;
+            top: 0;
+        }
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            position: absolute;
+            left: 0;
+            transition: .9;
+        }
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            left: 0;
+            top: 200px;
+            transition: .9;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            // obj 要直行動畫的物件
+            // attr 要執行動畫樣式, left top width...
+            // target 直行動化的目標位置
+            // speed 正值
+            // callback 回調函數
+            let move = (obj, attr, target, speed, callback) => {
+                clearInterval(obj.timer);
+                // 判斷速度的正負值
+                let current = parseInt(getComputedStyle(obj, null)[attr]);
+                if (current > target) {
+                    speed = -speed;
+                }
+                // 向執行動畫的物件，新增一個timer屬性，可以防止另一個物件停止其他物件的定時器
+                obj.timer = setInterval(function() {
+                    let oldVaule = parseInt(getComputedStyle(obj, null)[attr]);
+                    let newVaule = oldVaule + speed;
+
+                    // 向左移動時(speed < 0)判斷 newValue 是否小於 target
+                    // 向右移動時(speed > 0)判斷 newValue 是否大於 target
+                    if(speed < 0 && newVaule < target || speed > 0 && newVaule > target) {
+                        newVaule = target;
+                    }
+
+                    obj.style[attr] = `${newVaule}px`
+
+                    if (newVaule == target) {
+                        clearInterval(obj.timer);
+                        callback && callback();
+                    }
+                }, 30);
+            }
+
+            let box1 = document.getElementById("box1");
+            let box2 = document.getElementById("box2");
+
+            let btn1 = document.getElementById("btn1");
+            let btn2 = document.getElementById("btn2");
+            let btn3 = document.getElementById("btn3");
+            let btn4 = document.getElementById("btn4");
+
+            btn1.onclick = () => {
+                move(box1, "left", 400, 20);
+            };
+
+            btn2.onclick = () => {
+                move(box1, "left", 0, 10);
+            };
+
+            btn3.onclick = () => {
+                move(box2, "left", 400, 10);
+            }
+            btn4.onclick = () => {
+                // move(box2, "width", 400, 10);
+                // move(box2, "height", 400, 10);
+                // move(box2, "height", 400, 10);
+                move(box2, "width", 400, 10, () => {
+                    move(box2, "height", 400, 10, () => {
+                        move(box2, "top", 0, 10, () => {
+                            move(box2, "width", 100, 10, () => {
+                                move(box2, "height", 100, 10, () => {
+                                });
+                            });
+                        });
+                    });
+                });
+            }
+        };
+    </script>
+</head>
+<body>
+    <button id="btn1">box1向右移動</button>
+    <button id="btn2">box1向左移動</button>
+    <button id="btn3">box2向右移動</button>
+    <button id="btn4">測試按鈕</button>
+    <br><br>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="line"></div>
+</body>
+</html>

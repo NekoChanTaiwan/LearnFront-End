@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        .b2 {
+            /* width: 200px; */
+            height: 200px;
+            background-color: palegreen;
+        }
+    </style>
+    <script src="/JavaScript/函式庫/nekochan.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        onload = () => {
+            const box = document.getElementById("box");
+            const btn01 = document.getElementById("btn01");
+            btn01.onclick = () => {
+                // box.style.width = "200px";
+                // box.style.height = "200px";
+                // box.style.backgroundColor = "red";
+                // box.className += " b2"
+                // addClass(box, "b2");
+                // removeClass(box , "b2");
+                // toggleClass(box, "b2");
+            };
+        };
+    </script>
+</head>
+<body>
+    <button id="btn01">修改box樣式</button>
+    <br><br>
+    <div id="box" class="b1 b2"></div>
+</body>
+</html>

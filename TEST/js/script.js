@@ -1,11 +1,11 @@
-// function Person(name, age, gender) {
-//     this.name = name;
-//     this.age = age;
-//     this.gender = gender;
-//     this.sayName = function() {
-//         alert(this.name);
-//     }
-// }
+function Person(name, age, gender) {
+	this.name = name;
+	this.age = age;
+	this.gender = gender;
+	this.sayName = function () {
+		alert(this.name);
+	};
+}
 
 // function Dog() {
 // }
@@ -22,12 +22,11 @@
 
 // alert(per);
 // alert(per2);
+// console.log(per);
 
 // --------------------------------------------
 
-// function MyClass() {
-
-// }
+// function MyClass() {}
 
 // MyClass.prototype.a = 123
 
@@ -37,20 +36,18 @@
 
 // var mc2 = new MyClass()
 
-// console.log(MyClass.prototype);
+// console.log(MyClass);
 // console.log(mc.__proto__);
 // console.log(mc.a);
 // console.log(mc2.__proto__);
 
 // --------------------------------------------
 
-// function MyClass() {
-// }
+// function MyClass() {}
 
-// MyClass.prototype.name = "我是原型中的 name"
+// MyClass.prototype.name = "我是原型中的 name";
 
 // var mc = new MyClass();
-
 // console.log("name" in mc);
 // console.log(mc.hasOwnProperty("name"));
 
@@ -58,9 +55,9 @@
 
 // console.log("hasOwnProperty" in mc);
 
-// console.log(MyClass.prototype.__proto__.hasOwnProperty)
+// console.log(MyClass.prototype.__proto__.hasOwnProperty);
 
-// console.log(mc.__proto__.__proto__)
+// console.log(mc.__proto__.__proto__);
 
 // --------------------------------------------
 
@@ -71,5 +68,93 @@
 
 // --------------------------------------------
 
-let let = 1;
-console.log(let);
+// function Person(name, age, gender) {
+// 	this.name = name;
+// 	this.age = age;
+// 	this.gender = gender;
+// 	this.sayName = function () {
+// 		alert(this.name);
+// 	};
+// }
+
+// --------------------------------------------
+
+// let num = new Number(3);
+// let str = new String("hello");
+// let bool = new Boolean(true);
+
+// str.name = "world";
+
+// console.log(num);
+// console.log(str);
+// console.log(bool);
+
+// console.log(str.name);
+
+// --------------------------------------------
+
+// let str = "Hello World";
+// console.log(str.charCodeAt(6));
+
+// let result = String.fromCharCode(73);
+// console.log(result);
+
+// --------------------------------------------
+
+// let reg = new RegExp("a", "i");
+
+// let str = "a";
+
+// console.log(reg.test(str));
+// console.log(reg.test("bca"));
+// console.log(reg.test("bb"));
+// console.log(reg.test("A"));
+
+// let reg = /a/i;
+// let str = "a";
+// console.log(typeof reg);
+
+// reg = /a|b|c/m;
+// console.log(reg.test("dcd"));
+
+// reg = /a[bde]c/;
+// console.log(reg.test("afc"));
+
+// reg = /[^ab]/;
+// console.log(reg.test("abc"));
+
+// reg = /[^0-9]/;
+// console.log(reg.test("1231"));
+
+// let str = "1a2b3c4d5e6f7";
+// let result = str.split(/[a-z]/);
+// console.log(result);
+
+// let str = "hello abc hello abc";
+// let result = str.search(/a[bef]c/);
+// console.log(result);
+
+// let str = "1a2b3c4d5e6f7A8B9C";
+// let result = str.match(/[a-z]/gi);
+// console.log(result);
+// console.log(Array.isArray(result));
+// result = str.replace(/[a-z]/gi, "");
+// console.log(result);
+
+// let reg = /(ab){3}/;
+// console.log(reg.test("ababab"));
+
+// let reg = /ab{1,2}c/;
+// console.log(reg.test("abbc"));
+
+// let reg = /ab?c/;
+// console.log(reg.test("abbbc"));
+
+// let reg = /^a/;
+// reg = /a$/;
+// reg = /^a$/;
+// console.log(reg.test("abca"));
+
+let reg = /\./;
+reg = /\\/;
+console.log(reg.test("asds.\\ad"));

@@ -14,7 +14,6 @@
 // let per2 = new Person("凱劉", 16, "女");
 // let dog = new Dog();
 
-
 // console.log(dog instanceof Person);
 
 // Person.prototype.toString = function() {
@@ -71,3 +70,6 @@
 // };
 
 // --------------------------------------------
+
+m = 1;
+console.log(m);

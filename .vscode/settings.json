@@ -10,5 +10,6 @@
         "borderWidth : 1px",
         "borderColor : {color}; opacity: 0.5"
     ],
-    "compile-hero.disable-compile-files-on-did-save-code": true
+    "compile-hero.disable-compile-files-on-did-save-code": true,
+    "liveServer.settings.multiRootWorkspaceName": "LearnFront-End"
 }

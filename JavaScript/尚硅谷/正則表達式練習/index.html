@@ -5,9 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<script>
-			let reg = /^1[3-9][0-9]{9}$/;
-			let num = "13067890123";
-			console.log(reg.test(num));
+			// let reg = /^1[3-9][0-9]{9}$/;
+			// let num = "13067890123";
+			// console.log(reg.test(num));
+
+			// hello                 @	abc          .com			  .tw
+			// 任意字母數字下劃線	 @	任意字幕數字  .任意字母(2-5位) .任意字母(2-5位)
+			// \w{3,}  (\.\w+)*  @    [A-z0-9]+ (\.[A-z]{2,5}){1,2}
+			let emailReg = /^\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]{2,5}){1,2}$/;
+			let email = "abc@gmail.com";
+			console.log(emailReg.test(email));
 		</script>
 	</head>
 	<body></body>

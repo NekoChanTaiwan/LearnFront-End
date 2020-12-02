@@ -1,11 +1,11 @@
-function Person(name, age, gender) {
-	this.name = name;
-	this.age = age;
-	this.gender = gender;
-	this.sayName = function () {
-		alert(this.name);
-	};
-}
+// function Person(name, age, gender) {
+// 	this.name = name;
+// 	this.age = age;
+// 	this.gender = gender;
+// 	this.sayName = function () {
+// 		alert(this.name);
+// 	};
+// }
 
 // function Dog() {
 // }
@@ -155,6 +155,22 @@ function Person(name, age, gender) {
 // reg = /^a$/;
 // console.log(reg.test("abca"));
 
-let reg = /\./;
-reg = /\\/;
-console.log(reg.test("asds.\\ad"));
+// let reg = /\./;
+// reg = /\\/;
+// console.log(reg.test("asds.\\ad"));
+
+// let reg = new RegExp("\\.");
+// console.log(reg);
+
+// let reg = /\bchild\b/;
+// console.log(reg.test("hello child ren"));
+
+// let str = prompt("輸入用戶名");
+// let str = "                   ad  m  in                     ";
+// result = str.replace(/\s/gi, "");
+// result = str.replace(/^\s*/gi, ""); // 去除開童空格
+// result = str.replace(/\s*$/gi, ""); // 去除結尾空格
+// result = str.replace(/^\s*|\s*$/g, ""); // 去除前後空格
+// console.log(result);
+
+// let object = new Object();

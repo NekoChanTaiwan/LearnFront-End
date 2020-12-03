@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style></style>
+		<script src="/jQuery/jquery-3.5.1.min.js"></script>
+		<script>
+			$(() => {
+				$("div:first").css("background-color", "skyblue");
+				$("div:last").css("background-color", "tomato");
+				$("div:not(:first, :last)").css("background-color", "#bfa");
+				// $("div:even").css("background-color", "white");
+				// $("div:odd").css("background-color", "black");
+				$("div:eq(4)").css("background-color", "orange");
+				$("div:gt(5):not(:last)").css("background-color", "pink");
+				$("div:lt(3):not(:first)").css("background-color", "yellow");
+				$(":header").css("background-color", "grey");
+			});
+		</script>
+	</head>
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<h1>h1</h1>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, vel.
+			Adipisci nam rerum et sit quibusdam repudiandae ab sapiente eligendi totam
+			eaque, distinctio, eveniet temporibus dolorum, perferendis pariatur libero
+			laudantium?
+		</p>
+		<h2>h2</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ipsa
+			mollitia cum quae facere placeat. Aperiam doloremque nam modi ex suscipit?
+			Quos laboriosam quam voluptatibus nesciunt magni atque quis dignissimos.
+		</p>
+	</body>
+</html>

@@ -174,3 +174,12 @@
 // console.log(result);
 
 // let object = new Object();
+
+// --------------------------------------------
+
+// console.log(console.constructor == Object);
+
+// window.console.log("123");
+// console.log(window);
+console.log(navigator.appName);
+console.log(navigator.userAgent);

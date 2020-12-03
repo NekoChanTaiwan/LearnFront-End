@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 // ===================================================
 //                      DOM函式庫
 // ===================================================
@@ -72,3 +72,39 @@ function toggleClass(obj, classStr) {
 	}
 }
 // ===================================================
+//                      BOM函式庫
+// ===================================================
+/**
+ * 【NekoChan函式庫】元素動畫
+ * @param obj obj：目標元素
+ * @param attrStr attrStr：要執行動畫樣式（字符串）
+ * @param target target：執行動畫的目標位置
+ * @param speed 速度（正值）
+ * @param callback 回調函數
+ */
+let move = (obj, attrStr, target, speed, callback) => {
+	clearInterval(obj.timer);
+	// 判斷速度的正負值
+	let current = parseInt(getComputedStyle(obj, null)[attrStr]);
+	if (current > target) {
+		speed = -speed;
+	}
+	// 向執行動畫的物件，新增一個timer屬性，可以防止另一個物件停止其他物件的定時器
+	obj.timer = setInterval(function () {
+		let oldVaule = parseInt(getComputedStyle(obj, null)[attrStr]);
+		let newVaule = oldVaule + speed;
+
+		// 向左移動時(speed < 0)判斷 newValue 是否小於 target
+		// 向右移動時(speed > 0)判斷 newValue 是否大於 target
+		if ((speed < 0 && newVaule < target) || (speed > 0 && newVaule > target)) {
+			newVaule = target;
+		}
+
+		obj.style[attrStr] = `${newVaule}px`;
+
+		if (newVaule == target) {
+			clearInterval(obj.timer);
+			callback && callback();
+		}
+	}, 30);
+};

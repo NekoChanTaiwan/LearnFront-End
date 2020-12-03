@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function Person(name, age) {
+				// 構造函數（類型）
+				this.name = name;
+				this.age = age;
+			}
+
+			let p = new Person("NekoChan", 18); // 根據（類型）創建的（實例）
+
+			let a;
+			console.log(a);
+			a = null;
+			console.log(a);
+
+			let b = null;
+			b = "nekochan";
+			b = null;
+
+			let c = function () {}; //保存物件地址
+			console.log(typeof c); // 'function' （根據 c 的地址去判斷這是 function）
+		</script>
+	</body>
+</html>

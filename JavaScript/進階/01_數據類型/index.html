@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// 基本型別
+			let a;
+			console.log(a, typeof a === "undefined", a === undefined); // undefined, true, true
+
+			a = 3;
+			console.log(typeof a === "number"); // true
+
+			a = "NekoChan";
+			console.log(typeof a === "string"); // true
+
+			a = true;
+			console.log(typeof a === "boolean"); // true
+
+			a = null;
+			console.log(typeof a, a === null); // "object" true
+
+			console.log("--------------------------------");
+			// 物件型別
+			let b1 = {
+				b2: [1, "abc", console.log],
+				b3: function () {
+					console.log("b3");
+					return function () {
+						return "Hello World";
+					};
+				},
+			};
+
+			// A instanceof B： A 是否為 B類型的實例
+			console.log(b1 instanceof Object, b1 instanceof Array); // true false
+			console.log(b1.b2 instanceof Array, b1.b2 instanceof Object); // true true
+			console.log(b1.b3 instanceof Function, b1.b3 instanceof Object); // true true
+
+			console.log(typeof b1.b2); // object (typeof 區別不了 object 與 array, null 與 object)
+
+			console.log(typeof b1.b3 === "function"); // true
+			console.log(typeof b1.b2[2] == "function"); // true
+
+			b1.b2[2]("Hello Function");
+			console.log(b1.b3()());
+		</script>
+	</body>
+</html>

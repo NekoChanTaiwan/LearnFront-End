@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="/jQuery/jquery-3.5.1.min.js"></script>
+		<script>
+			$(() => {
+				// 傳入參數為 [ 函數 ] 時，表示頁面加載完成之後。
+				// alert("頁面加載完成！");
+
+				$(`
+					<div>
+						<span>div-span1</span>
+						<span>div-span2</span>
+					</div>
+				`).appendTo("body");
+				// 傳入參數為 [ HTML 字符串 ] 時，會幫我們創建這些 HTML 標籤物件
+
+				// console.log($("button").length);
+				// 傳入參數為 [ CSS選擇器 字符串 ] 時，根據 CSS選擇器 查詢相對節點
+
+				let btn = document.getElementById("btn01");
+				// alert(btn);
+				console.log(btn);
+				// alert($(btn));
+				console.log($(btn));
+			});
+			// alert("頁面讀取中");
+		</script>
+	</head>
+	<body>
+		<div>
+			<span>div-span1</span>
+			<span>div-span2</span>
+		</div>
+		<button id="btn01">按鈕1</button>
+		<button>按鈕2</button>
+		<button>按鈕3</button>
+	</body>
+</html>

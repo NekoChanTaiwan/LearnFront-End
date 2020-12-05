@@ -211,38 +211,119 @@
 
 // console.log(p);
 
-function showInfo(age) {
-	if (age < 18) {
-		console.log("未成年");
-	} else if (age > 60) {
-		console.log("算了吧");
-	} else {
-		console.log("剛好");
-	}
-}
+// function showInfo(age) {
+// 	if (age < 18) {
+// 		console.log("未成年");
+// 	} else if (age > 60) {
+// 		console.log("算了吧");
+// 	} else {
+// 		console.log("剛好");
+// 	}
+// }
 
-showInfo(17);
-showInfo(65);
-showInfo(25);
+// showInfo(17);
+// showInfo(65);
+// showInfo(25);
 
-function fn1() {
-	// 函式聲明
-	console.log("fn1()");
-}
+// function fn1() {
+// 	// 函式聲明
+// 	console.log("fn1()");
+// }
 
-let fn2 = function () {
-	// 函式表達式
-	console.log("fn2()");
-};
+// let fn2 = function () {
+// 	// 函式表達式
+// 	console.log("fn2()");
+// };
 
-fn1();
-fn2();
+// fn1();
+// fn2();
 
-let obj = {};
+// let obj = {};
 
-function test2() {
-	this.xxx = "hi";
-}
+// function test2() {
+// 	this.xxx = "hi";
+// }
 
-test2.call(obj); // 可以讓一個函式成為指定任意物件的方法進行調用
-console.log(obj.xxx);
+// test2.call(obj); // 可以讓一個函式成為指定任意物件的方法進行調用
+// console.log(obj.xxx);
+// --------------------------------------------
+
+// (function () {
+// 	var a = 1;
+// 	function test() {
+// 		console.log(++a);
+// 	}
+// 	function test2() {
+// 		console.log("test2()");
+// 	}
+// 	window.$ = function () {
+// 		// 向外暴露一個全局函式
+// 		return {
+// 			test: test,
+// 		};
+// 	};
+// })();
+
+// $().test(); // 1. $是一個函數名 2. $執行後返回的是一個物件
+
+// --------------------------------------------
+
+// function Person(color) {
+// 	console.log(this)
+// 	this.color = color
+// 	this.getColor = function () {
+// 		console.log(this)
+// 		return this.color
+// 	}
+// 	this.setColor = function (color) {
+// 		console.log(this)
+// 		this.color = color
+// 	}
+// }
+
+// Person('red') // this = window
+
+// let p = new Person('yellow') // this = p
+
+// p.getColor() // this = p
+
+// let obj = {}
+// p.setColor.call(obj, 'black') // this = obj
+
+// let test = p.setColor
+// test() // test = window
+
+// function fun1() {
+// 	function fun2() {
+// 		console.log(this)
+// 	}
+// 	fun2() // this = window
+// }
+// fun1()
+
+// --------------------------------------------
+// console.log(typeof Date.prototype)
+// console.log(Date.prototype)
+// function Fun() {}
+
+// console.log(fun.prototype)
+
+// console.log(Date.prototype.constructor === Date)
+// console.log(Fun.prototype.constructor === Fun)
+
+// 給原型物件添加屬性(通常是方法) === > 實俐物件可以使用
+// Fun.prototype.test = function () {
+// 	console.log('test()')
+// }
+
+// let fun = new Fun()
+
+// fun.test()
+
+function Fn() {}
+console.log(Fn.prototype)
+
+let fn = new Fn()
+console.log(fn.__proto__)
+
+console.log(Fn.prototype === fn.__proto__)

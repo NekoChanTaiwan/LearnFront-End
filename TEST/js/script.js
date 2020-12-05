@@ -181,5 +181,68 @@
 
 // window.console.log("123");
 // console.log(window);
-console.log(navigator.appName);
-console.log(navigator.userAgent);
+// console.log(navigator.appName);
+// console.log(navigator.userAgent);
+
+// --------------------------------------------
+
+// let name = () => {
+// 	console.log("test");
+// };
+
+// let name = function () {
+// 	console.log("test");
+// };
+
+// function name() {
+// 	console.log("test");
+// }
+
+// name();
+
+// --------------------------------------------
+
+// let p = {};
+// let propName = "myAge";
+// let value = 18;
+
+// p.propName = value;
+// p[propName] = value;
+
+// console.log(p);
+
+function showInfo(age) {
+	if (age < 18) {
+		console.log("未成年");
+	} else if (age > 60) {
+		console.log("算了吧");
+	} else {
+		console.log("剛好");
+	}
+}
+
+showInfo(17);
+showInfo(65);
+showInfo(25);
+
+function fn1() {
+	// 函式聲明
+	console.log("fn1()");
+}
+
+let fn2 = function () {
+	// 函式表達式
+	console.log("fn2()");
+};
+
+fn1();
+fn2();
+
+let obj = {};
+
+function test2() {
+	this.xxx = "hi";
+}
+
+test2.call(obj); // 可以讓一個函式成為指定任意物件的方法進行調用
+console.log(obj.xxx);

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			div,
+			span,
+			p {
+				width: 140px;
+				height: 140px;
+				margin: 5px;
+				background: #aaa;
+				border: #000 1px solid;
+				float: left;
+				font-size: 17px;
+				font-family: Verdana;
+			}
+
+			div.mini {
+				width: 55px;
+				height: 55px;
+				background-color: #aaa;
+				font-size: 12px;
+			}
+
+			div.hide {
+				display: none;
+			}
+		</style>
+		<script src="/jQuery/jquery-3.5.1.min.js"></script>
+		<script>
+			$(() => {
+				function animateIt() {
+					$("#mover").slideToggle("slow", animateIt);
+				}
+				animateIt();
+			});
+			$(() => {
+				// (1)eq()  選擇索引值為等於 3 的 div 元素
+				$("#btn1").click(() => {
+					$("div").eq(3).css("background-color", "#bfa");
+				});
+
+				// (2)first()選擇第一個 div 元素
+				$("#btn2").click(() => {
+					$("div").first().css("background-color", "#bfa");
+				});
+
+				// (3)last()選擇最後一個 div 元素
+				$("#btn3").click(() => {
+					$("div").last().css("background-color", "#bfa");
+				});
+
+				// (4)filter()在div中選擇索引為偶數的
+				$("#btn4").click(() => {
+					$("div").filter(":even").css("background-color", "#bfa");
+				});
+
+				// (5)is()判斷#one是否為:empty或:parent
+				// is用來檢測jq對象是否符合指定的選擇器
+				$("#btn5").click(() => {
+					alert($("#one").is(":empty"));
+				});
+
+				// (6)has()選擇div中包含.mini的
+				$("#btn6").click(() => {
+					$("div").has(".mini").css("background-color", "#bfa");
+				});
+
+				// (7)not()選擇div中class不為one的
+				$("#btn7").click(() => {
+					$("div").not(".one").css("background-color", "#bfa");
+				});
+
+				// (8)children()在body中選擇所有class為one的div子元素
+				$("#btn8").click(() => {
+					$("body")
+						.children()
+						.filter("div.one")
+						.css("background-color", "#bfa");
+				});
+
+				// (9)find()在body中選擇所有class為mini的div元素
+				$("#btn9").click(() => {
+					$("body").find("div.mini").css("background-color", "#bfa");
+				});
+
+				// (10)next() #one的下一個div
+				$("#btn10").click(() => {
+					$("#one").next().css("background-color", "#bfa");
+				});
+
+				// (11)nextAll() #one後面所有的span元素
+				$("#btn11").click(() => {
+					$("#one").nextAll("span").css("background-color", "#bfa");
+				});
+
+				// (12)nextUntil() #one和span之間的元素
+				$("#btn12").click(() => {
+					$("#one").nextUntil("span").css("background-color", "#bfa");
+				});
+
+				// (13)parent() .mini的父元素
+				$("#btn13").click(() => {
+					$(".mini").parent().css("background-color", "#bfa");
+				});
+
+				// (14)prev() #two的上一個div
+				$("#btn14").click(() => {
+					$("#two").prev().css("background-color", "#bfa");
+				});
+
+				// (15)prevAll() span前面所有的div
+				$("#btn15").click(() => {
+					$("span").prevAll("div").css("background-color", "#bfa");
+				});
+
+				// (16)prevUntil() span向前直到#one的元素
+				$("#btn16").click(() => {
+					$("span").prevUntil("#one").css("background-color", "#bfa");
+				});
+
+				// (17)siblings() #two的所有兄弟元素
+				$("#btn17").click(() => {
+					$("#two").siblings("").css("background-color", "#bfa");
+				});
+
+				// (18)add()選擇所有的 span 元素和id為two的元素
+				$("#btn18").click(() => {
+					$("span").add("#two").css("background-color", "#bfa");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" value="eq()選擇索引值為等於 3 的 div 元素" id="btn1" />
+		<input type="button" value="first()選擇第一個 div 元素" id="btn2" />
+		<input type="button" value="last()選擇最後一個 div 元素" id="btn3" />
+		<input type="button" value="filter()在div中選擇索引為偶數的" id="btn4" />
+		<input type="button" value="is()判斷#one是否為:empty或:parent" id="btn5" />
+		<input type="button" value="has()選擇div中包含.mini的" id="btn6" />
+		<input type="button" value="not()選擇div中class不為one的" id="btn7" />
+		<input
+			type="button"
+			value="children()在body中選擇所有class為one的div子元素"
+			id="btn8"
+		/>
+		<input
+			type="button"
+			value="find()在body中選擇所有class為mini的div後代元素"
+			id="btn9"
+		/>
+		<input type="button" value="next()#one的下一個div" id="btn10" />
+		<input type="button" value="nextAll()#one後面所有的span元素" id="btn11" />
+		<input type="button" value="nextUntil()#one和span之間的元素" id="btn12" />
+		<input type="button" value="parent().mini的父元素" id="btn13" />
+		<input type="button" value="prev()#two的上一個div" id="btn14" />
+		<input type="button" value="prevAll()span前面所有的div" id="btn15" />
+		<input type="button" value="prevUntil()span向前直到#one的元素" id="btn16" />
+		<input type="button" value="siblings()#two的所有兄弟元素" id="btn17" />
+		<input
+			type="button"
+			value="add()選擇所有的 span 元素和id為two的元素"
+			id="btn18"
+		/>
+		<h3>基本選擇器.</h3>
+		<br /><br />
+		文本框<input type="text" name="account" disabled="disabled" /> <br /><br />
+		<div class="one" id="one">
+			id 為 one,class 為 one 的div
+			<div class="mini">class為mini</div>
+		</div>
+		<div class="one" id="two" title="test">
+			id為two,class為one,title為test的div
+			<div class="mini" title="other"><b>class為mini,title為other</b></div>
+			<div class="mini" title="test">class為mini,title為test</div>
+		</div>
+		<div class="one">
+			<div class="mini">class為mini</div>
+			<div class="mini">class為mini</div>
+			<div class="mini">class為mini</div>
+			<div class="mini"></div>
+		</div>
+		<div class="one">
+			<div class="mini">class為mini</div>
+			<div class="mini">class為mini</div>
+			<div class="mini">class為mini</div>
+			<div class="mini" title="tesst">class為mini,title為tesst</div>
+		</div>
+		<div style="display: none" class="none">style的display為"none"的div</div>
+		<div class="hide">class為"hide"的div</div>
+		<span id="span1">^^span元素 111^^</span>
+		<div>包含input的type為"hidden"的div<input type="hidden" size="8" /></div>
+		<span id="span2">^^span元素 222^^</span>
+		<div id="mover">正在執行動畫的div元素.</div>
+	</body>
+</html>

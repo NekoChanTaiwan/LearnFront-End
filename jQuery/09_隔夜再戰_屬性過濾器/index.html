@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			div,
+			span,
+			p {
+				width: 140px;
+				height: 140px;
+				margin: 5px;
+				background: #aaa;
+				border: #000 1px solid;
+				float: left;
+				font-size: 17px;
+				font-family: Verdana;
+			}
+
+			div.mini {
+				width: 55px;
+				height: 55px;
+				background-color: #aaa;
+				font-size: 12px;
+			}
+
+			div.hide {
+				display: none;
+			}
+		</style>
+		<script src="/jQuery/jquery-3.5.1.min.js"></script>
+		<script>
+			$(() => {
+				function animateIt() {
+					$("#mover").slideToggle("slow", animateIt);
+				}
+				animateIt();
+			});
+
+			$(() => {
+				// 1.選取含有 屬性title 的div元素
+				$("#btn1").click(() => {
+					$("div[title]").css("background-color", "#bfa");
+				});
+
+				// 2.選取 屬性title值等於'test'的div元素
+				$("#btn2").click(() => {
+					$("div[title='test']").css("background-color", "#bfa");
+				});
+
+				// 3.選取 屬性title值不等於'test'的div元素(*沒有屬性title的也將被選中)
+				$("#btn3").click(() => {
+					$("div[title!='test']").css("background-color", "#bfa");
+				});
+
+				// 4.選取 屬性title值 以'te'開始 的div元素
+				$("#btn4").click(() => {
+					$("div[title^='te']").css("background-color", "#bfa");
+				});
+
+				// 5.選取 屬性title值 以'est'結束 的div元素
+				$("#btn5").click(() => {
+					$("div[title$='est']").css("background-color", "#bfa");
+				});
+
+				// 6.選取 屬性title值 含有'es'的div元素
+				$("#btn6").click(() => {
+					$("div[title*='es']").css("background-color", "#bfa");
+				});
+
+				// 7.首先選取有屬性id的div元素，然後在結果中 選取屬性title值 含有'es'的 div 元素
+				$("#btn7").click(() => {
+					$("div[id][title*='es']").css("background-color", "#bfa");
+				});
+
+				// 8.選取 含有 title 屬性值, 且title 屬性值不等於 test 的 div 元素
+				$("#btn8").click(() => {
+					// $("div[title!='test']").css("background-color", "#bfa"); // 錯誤
+					$("div[title][title!='test']").css("background-color", "#bfa");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- <input
+			type="button"
+			value="選取含有 屬性title 的div元素."
+			id="btn1"
+			style="display: none"
+		/> -->
+		<input type="button" value="選取含有 屬性title 的div元素." id="btn1" />
+		<input
+			type="button"
+			value="選取 屬性title值等於'test'的div元素."
+			id="btn2"
+		/>
+		<input
+			type="button"
+			value="選取 屬性title值不等於'test'的div元素(沒有屬性title的也將被選中)."
+			id="btn3"
+		/>
+		<input
+			type="button"
+			value="選取 屬性title值 以'te'開始 的div元素."
+			id="btn4"
+		/>
+		<input
+			type="button"
+			value="選取 屬性title值 以'est'結束 的div元素."
+			id="btn5"
+		/>
+		<input
+			type="button"
+			value="選取 屬性title值 含有'es'的div元素."
+			id="btn6"
+		/>
+		<input
+			type="button"
+			value="組合屬性選擇器,首先選取有屬性id的div元素，然後在結果中 選取屬性title值 含有'es'的 div 元素."
+			id="btn7"
+		/>
+		<input
+			type="button"
+			value="選取 含有 title 屬性值, 且title 屬性值不等於 test 的 div 元素."
+			id="btn8"
+		/>
+
+		<br />
+		<br />
+		<div class="one" id="one">
+			id 為 one,class 為 one 的div
+			<div class="mini">class為mini</div>
+		</div>
+		<div class="one" id="two" title="test">
+			id為two,class為one,title為test的div
+			<div class="mini" title="other">class為mini,title為other</div>
+			<div class="mini" title="test">class為mini,title為test</div>
+		</div>
+		<div class="one">
+			<div class="mini">class為mini</div>
+			<div class="mini">class為mini</div>
+			<div class="mini">class為mini</div>
+			<div class="mini"></div>
+		</div>
+		<div class="one">
+			<div class="mini">class為mini</div>
+			<div class="mini">class為mini</div>
+			<div class="mini">class為mini</div>
+			<div class="mini" title="tesst">class為mini,title為tesst</div>
+		</div>
+		<div style="display: none" class="none">style的display為"none"的div</div>
+		<div class="hide">class為"hide"的div</div>
+		<div>
+			包含input的type為"hidden"的div<input
+				type="hidden"
+				value="123456789"
+				size="8"
+			/>
+		</div>
+		<div id="mover">正在執行動畫的div元素.</div>
+	</body>
+</html>

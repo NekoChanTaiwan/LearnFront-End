@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="/jQuery/jquery-3.5.1.min.js"></script>
+		<script>
+			$(() => {
+				// 1.對表單內 可用input 賦值操作
+				$("#btn1").click(() => {
+					// val() 可以操作表單項的value屬性值，可以設定和獲取
+					$(":text:enabled").val("我是萬能的工程師");
+				});
+				// 2.對表單內 不可用input 賦值操作
+				$("#btn2").click(() => {
+					$(":text:disabled").val("我是萬能的工程師");
+				});
+				// 3.獲取多選框選中的個數  使用size()方法獲取選取到的元素集合的元素個數
+				$("#btn3").click(() => {
+					alert($(":checkbox:checked").length);
+				});
+				// 4.獲取多選框，每個選中的value值
+				$("#btn4").click(() => {
+					let $checkBox = $(":checkbox:checked");
+					$checkBox.each(function () {
+						alert(this.value);
+					});
+				});
+				// 5.獲取下拉框選中的內容
+				$("#btn5").click(() => {
+					let $options = $(":selected");
+					$options.each(function () {
+						alert(this.innerHTML);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>表單對象屬性過濾選擇器</h3>
+		<button id="btn1">對表單內 可用input 賦值操作.</button>
+		<button id="btn2">對表單內 不可用input 賦值操作.</button><br /><br />
+		<button id="btn3">獲取多選框選中的個數.</button>
+		<button id="btn4">獲取多選框選中的內容.</button><br /><br />
+		<button id="btn5">獲取下拉框選中的內容.</button><br /><br />
+
+		<form id="form1" action="#">
+			可用元素: <input name="add" value="可用文本框1" /><br />
+			不可用元素:
+			<input name="email" disabled="disabled" value="不可用文本框" /><br />
+			可用元素: <input name="che" value="可用文本框2" /><br />
+			不可用元素:
+			<input name="name" disabled="disabled" value="不可用文本框" /><br />
+			<br />
+
+			多選框: <br />
+			<input
+				type="checkbox"
+				name="newsletter"
+				checked="checked"
+				value="test1"
+			/>test1 <input type="checkbox" name="newsletter" value="test2" />test2
+			<input type="checkbox" name="newsletter" value="test3" />test3
+			<input
+				type="checkbox"
+				name="newsletter"
+				checked="checked"
+				value="test4"
+			/>test4 <input type="checkbox" name="newsletter" value="test5" />test5
+
+			<br /><br />
+			下拉選單1: <br />
+			<select name="test" multiple="multiple" style="height: 100px" id="sele1">
+				<option>新北</option>
+				<option selected="selected">東京</option>
+				<option>首爾</option>
+				<option selected="selected">紐約</option>
+				<option>加州</option>
+				<option>台中</option>
+			</select>
+
+			<br /><br />
+			下拉選單2: <br />
+			<select name="test2">
+				<option>新北</option>
+				<option>東京</option>
+				<option selected="selected">首爾</option>
+				<option>紐約</option>
+				<option>加州</option>
+				<option>台中</option>
+			</select>
+		</form>
+	</body>
+</html>

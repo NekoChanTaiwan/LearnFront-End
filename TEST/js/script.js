@@ -329,3 +329,28 @@
 // console.log(Fn.prototype === fn.__proto__)
 
 // --------------------------------------------
+
+// console.log(Object.prototype)
+
+function Fn() {
+	this.test1 = function () {
+		console.log('test()')
+	}
+}
+
+// console.log(Fn.prototype)
+// console.log(Fn.prototype instanceof Object)
+
+Fn.prototype.test2 = function () {
+	console.log('test2()')
+}
+
+let fn = new Fn()
+
+// console.log(fn.__proto__)
+
+// fn.test1()
+// fn.test2()
+
+// console.log(fn.toString())
+// fn.test3()

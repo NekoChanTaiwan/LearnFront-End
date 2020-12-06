@@ -320,10 +320,12 @@
 
 // fun.test()
 
-function Fn() {}
-console.log(Fn.prototype)
+// function Fn() {}
+// console.log(Fn.prototype)
 
-let fn = new Fn()
-console.log(fn.__proto__)
+// let fn = new Fn()
+// console.log(fn.__proto__)
 
-console.log(Fn.prototype === fn.__proto__)
+// console.log(Fn.prototype === fn.__proto__)
+
+// --------------------------------------------

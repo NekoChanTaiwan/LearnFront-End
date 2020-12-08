@@ -332,20 +332,20 @@
 
 // console.log(Object.prototype)
 
-function Fn() {
-	this.test1 = function () {
-		console.log('test()')
-	}
-}
+// function Fn() {
+// 	this.test1 = function () {
+// 		console.log('test()')
+// 	}
+// }
 
 // console.log(Fn.prototype)
 // console.log(Fn.prototype instanceof Object)
 
-Fn.prototype.test2 = function () {
-	console.log('test2()')
-}
+// Fn.prototype.test2 = function () {
+// 	console.log('test2()')
+// }
 
-let fn = new Fn()
+// let fn = new Fn()
 
 // console.log(fn.__proto__)
 
@@ -354,3 +354,71 @@ let fn = new Fn()
 
 // console.log(fn.toString())
 // fn.test3()
+
+// console.log(Function.prototype instanceof Object)
+
+// console.log(Function.__proto__ === Function.prototype)
+
+// console.log(Function.prototype.__proto__ === Object.prototype)
+
+// console.log(
+// 	Function.prototype.__proto__.__proto__ === Object.prototype.__proto__
+// )
+
+// console.log(Function instanceof Object)
+
+// console.log(typeof Object === typeof Function)
+
+// console.log(Object.prototype.__proto__)
+
+// let a = new String()
+// let b = new Number()
+// let c = new Object()
+
+// console.log(String.prototype === a.__proto__)
+
+// console.log(a.__proto__.__proto__ === b.__proto__.__proto__)
+// console.log(a.__proto__.__proto__ === c.__proto__)
+
+// --------------------------------------------
+
+// var a = 3
+// function fn() {
+// 	console.log(a) // undefined (變量提升)
+// 	var a = 4
+// }
+// fn()
+
+// fn2() // 可調用 (函式提升)
+
+// console.log(b) // undefined (變量提升)
+// var b = 3
+
+// function fn2() {
+// 	console.log('fn2()')
+// }
+
+// --------------------------------------------
+
+// console.log(a1)
+// a2()
+// console.log(this)
+// var a1 = 3
+// function a2() {
+//     console.log('a2()')
+// }
+
+function fn(a1) {
+	console.log(a1) // 2
+	console.log(a2) // undefined
+	a3() // a3()
+	console.log(this) // window
+	console.log(arguments) // 2, 3
+
+	var a2 = 3
+	function a3() {
+		console.log('fun()')
+	}
+}
+
+fn(2, 3)
